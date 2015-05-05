@@ -1,0 +1,26 @@
+// Colors
+$white: #fff;
+$black: #000;
+$dark: #242322;
+$copy-color: #666;
+$dark-grey: #161616;
+$medium-grey: #262626;
+$light-grey: #999;
+$lighter-grey: #f7f7f7;
+
+// Fonts
+$font-stack: "Lato", Arial, Helvetica, Tahoma, sans-serif;
+// $font-headings: "Roboto", Arial, Helvetica, Tahoma, sans-serif;
+// $font-serif: Georgia, serif;
+
+// Media queries
+
+$width-small: 768px; /* Small devices (tablets, 768px and up) */
+$width-medium: 992px; /* Medium devices (desktops, 992px and up) */
+$width-large: 1200px; /* Large devices (large desktops, 1200px and up) */
+
+$mobile-first: "screen and (max-width: 767px)";
+
+// Retina images
+
+ $is-hidpi: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx)";

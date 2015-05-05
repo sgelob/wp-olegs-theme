@@ -1,0 +1,169 @@
+@mixin title-style($color, $background: #eee) /* Multiple arguments + Defining defaults */ {
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+	
+	font: {
+		family: $font-serif;
+		size: 20px;
+		weight: bold;
+	}
+	
+	color: $color;
+	background: $background;
+}
+
+// background-size
+
+@mixin background-size($width, $height) {
+	-webkit-background-size: $width $height;
+	-moz-background-size: $width $height;
+	background-size: $width $height;
+}
+
+// border-radius – @include rounded(2px);
+
+@mixin rounded($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+// box-shadow – @include shadow(2px, 2px, 0, rgba(0,0,0,.25));
+
+@mixin shadow($x, $y, $blur, $color) {
+	-webkit-box-shadow: $x $y $blur $color;
+	-moz-box-shadow: $x $y $blur $color;
+	box-shadow: $x $y $blur $color;
+}
+
+@mixin shadow-inset($x, $y, $blur, $color) {
+	-webkit-box-shadow: inset $x $y $blur $color;
+	-moz-box-shadow: inset $x $y $blur $color;
+	box-shadow: inset $x $y $blur $color;
+}
+
+// transition @include transition(all, 0.2s, ease-in-out);
+
+@mixin transition($property, $duration, $method) {
+	-webkit-transition: $property $duration $method;
+	-moz-transition: $property $duration $method;
+	-o-transition: $property $duration $method;
+	-ms-transition: $property $duration $method;
+	transition: $property $duration $method;
+}
+
+//CSS3 Transform mixins transform: rotate, scale, skew, translate
+@mixin transform-rotate($val){
+    @if($val != null){
+        -webkit-transform: rotate($val + deg) ;
+        -moz-transform   : rotate($val + deg) ;
+        -o-transform     : rotate($val + deg) ;
+        -ms-transform    : rotate($val + deg) ;
+        transform        : rotate($val + deg) ;
+    }
+}
+@mixin transform-scale($x:1, $y:1){
+    -webkit-transform: scale($x, $y);
+    -moz-transform   : scale($x, $y);
+    -o-transform     : scale($x, $y);
+    -ms-transform    : scale($x, $y);
+    transform        : scale($x, $y);
+}
+@mixin transform-skew($x:0, $y:0){
+    -webkit-transform: skew($x + deg, $y + deg) ;
+    -moz-transform   : skew($x + deg, $y + deg) ;
+    -o-transform     : skew($x + deg, $y + deg) ;
+    -ms-transform    : skew($x + deg, $y + deg) ;
+    transform        : skew($x + deg, $y + deg) ;
+}
+@mixin transform-translate($x, $y){
+    @if($x != null){
+        -webkit-transform: translateX($x);
+        -moz-transform   : translateX($x);
+        -o-transform     : translateX($x);
+        -ms-transform    : translateX($x);
+        transform        : translateX($x);
+    }
+    @if($y != null){
+        -webkit-transform: translateY($y);
+        -moz-transform   : translateY($y);
+        -o-transform     : translateY($y);
+        -ms-transform    : translateY($y);
+        transform        : translateY($y);
+    }
+}
+
+// box-sizing
+
+@mixin box-sizing {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// linear-gradient
+
+@mixin linear-gradient($from, $to) {
+	/* Fallback for sad browsers */
+	background-color: $to;
+	/* Mozila Firefox */
+	background-image: -moz-linear-gradient($from,$to);
+	/* Opera */
+	background-image: -o-linear-gradient($from,$to);
+	/* Webkit (Safari 4+, Chrome 1+) */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-linear-gradient($from, $to);
+	/* IE10 */
+	background-image: -ms-linear-gradient($from, $to);
+	/* W3C */
+	background-image: linear-gradient($from, $to);
+}
+
+// opacity
+
+@mixin opacity($property) {
+	opacity: $property;
+	-moz-opacity: $property;
+	filter:alpha(opacity=$property);
+}
+
+// Responsive @include responsive(small-screens) { }
+
+@mixin responsive($width) {
+	@if $width == large-screens {
+		/* Large devices (large desktops, 1200px and up) */
+		@media only screen and (min-width: $width-large) { @content; }
+	}
+	@else if $width == medium-screens {
+		/* Medium devices (desktops, 992px and up) */
+		@media only screen and (min-width: $width-medium) { @content; }
+	}
+	@else if $width == small-screens {
+		/* Small devices (tablets, 768px and up) */
+		@media only screen and (min-width: $width-small) { @content; }
+	}
+}
+
+// Retina
+
+@mixin retinize($file, $type, $width, $height, $repeat, $x, $y) {
+	background: transparent url('http://static.yesmoke.eu/images/' + $file + '.' + $type) $repeat $x $y;
+	
+	@media #{$is-hidpi} {
+		& {
+			background-image: url('http://static.yesmoke.eu/images/' + $file + '@2x.' + $type);
+			@include background-size($width, $height);
+		}
+	}
+}
+
+// Vertical align anything
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
