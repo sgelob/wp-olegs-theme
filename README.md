@@ -31,13 +31,13 @@ Rename folder to your theme name, change the `sass/style.scss` intro block to yo
 * [WordPress SEO by Yoast](https://wordpress.org/extend/plugins/wordpress-seo/)
 * [W3 Total Cache](https://wordpress.org/extend/plugins/w3-total-cache/)
 
-### Contributing:
+### Contributing
 
-Anyone and everyone is welcome to contribute!
+Anyone and everyone is welcome to contribute.
 
 ### Credits
 
-Without these projects, this WordPress Olegs Theme wouldn't be where it is today.
+Without these projects, this WordPress Olegs Theme wouldn't be here.
 
 * [Normalize.css](http://necolas.github.com/normalize.css)
 * [SASS / SCSS](http://sass-lang.com/)
