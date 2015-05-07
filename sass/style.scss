@@ -456,6 +456,14 @@ nav {
 .gallery-content {
 	@extend %text-styles;
 	
+	a {
+		color: #336699;
+		
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	
 	h2,
 	h3 {
 		font-weight: 400;
@@ -562,14 +570,6 @@ nav {
 	
 	@include responsive(small-screens) {
 		padding: 3em 1em;
-	}
-	
-	a {
-		color: #336699;
-		
-		&:hover {
-			text-decoration: underline;
-		}
 	}
 }
 
