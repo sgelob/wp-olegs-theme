@@ -29,5 +29,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	// Register Tasks
-	grunt.registerTask('default', ['sass', 'watch', 'concat']);
+	grunt.registerTask('default', ['concat', 'sass', 'watch']);
 };
