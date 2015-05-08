@@ -697,6 +697,10 @@ footer {
 		
 		li {
 			display: inline-block;
+			
+			&:first-child {
+				margin-right: 0.2em;
+			}
 		}
 	}
 }
