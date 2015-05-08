@@ -14,7 +14,7 @@ get_header(); ?>
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
 			<p>by <a rel="author" href="/about/">Olegs Belousovs</a> · 
-				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F, Y'); ?></time>
+				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time>
 				<span>Gallery in <?php the_terms( $post->ID, 'genre', '', '', '' ); ?> – <?php the_terms( $post->ID, 'country', '', '', '' ); ?></span>
 			</p>
 			</div>
