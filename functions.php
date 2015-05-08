@@ -9,38 +9,21 @@ function my_jquery_enqueue() {
 
 add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue' );
 
- function pbd_alp_init() {
- 	global $wp_query;
- 
- 	// Add code to index pages.
+// General Scripts
+function olegs_register_files() {
+	wp_register_script(
+		'custom-scripts',
+		get_stylesheet_directory_uri(). '/build/js/scripts.js',
+		array( 'jquery' ),
+		0.1,
+		true
+	);
+	wp_enqueue_script('custom-scripts');
+}
 
- 		// Queue JS
- 		wp_enqueue_script(
- 			'pbd-alp-load-posts',
- 			get_template_directory_uri() . 'js/load-posts.js',
- 			array('jquery'),
- 			'1.0',
- 			true
- 		);
- 		
- 		// What page are we on? And what is the pages limit?
- 		$max = $wp_query->max_num_pages;
- 		$paged = ( get_query_var('paged') > 1 ) ? get_query_var('paged') : 1;
- 		
- 		// Add some parameters for the JS.
- 		wp_localize_script(
- 			'pbd-alp-load-posts',
- 			'pbd_alp',
- 			array(
- 				'startPage' => $paged,
- 				'maxPages' => $max,
- 				'nextLink' => next_posts($max, false)
- 			)
- 		);
- }
- add_action('after_setup_theme', 'pbd_alp_init');
+add_action( 'wp_enqueue_scripts', 'olegs_register_files' );
 
-//
+// Remove WordPress version meta tag
 	
 remove_action('wp_head', 'wp_generator');
 
