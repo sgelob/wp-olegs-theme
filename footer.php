@@ -15,6 +15,10 @@
 </footer>
 <?php wp_footer(); ?>
 <script>
+	<?php if ( is_single() ) { ?>
+	// FitVids.js
+	$(".gallery-content").fitVids();
+	<?php } ?>
 	// Preloader
 	$(function(){
 		setTimeout( $('.preloader').fadeOut(), 500);
