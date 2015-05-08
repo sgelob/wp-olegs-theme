@@ -39,7 +39,7 @@ get_header(); ?>
 			<h3>See the Related Galleries</h3>
 			<?php
 				$backup = $post;  // backup the current object
-				$found_none = '<h2>No related posts found!</h2>';
+				$found_none = '<h2>No related galleries found!</h2>';
 				$taxonomy = 'genre';//  e.g. post_tag, category, custom taxonomy
 				$param_type = 'genre'; //  e.g. tag__in, category__in, but genre__in will NOT work
 				$tax_args = array('orderby' => 'none');
