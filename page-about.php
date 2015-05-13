@@ -9,11 +9,35 @@
 	<?php while ( have_posts() ) : the_post(); ?>
 	
 		<?php // Get attachment original size image URL
-		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-		$thumb_url = $thumb['0'];
+		$thumb_full = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+		$thumb_large = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+		$thumb_medium = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+		$thumb_url_full = $thumb_full['0'];
+		$thumb_url_large = $thumb_large['0'];
+		$thumb_url_medium = $thumb_medium['0'];
 	?>
 	
-	<section class="gallery-cover" style="background-image: url( <?php echo $thumb_url; ?> );">
+	<style>
+		@media all and (max-width: 767px) {
+			.gallery-cover {
+				background-image: url( <?php echo $thumb_url_medium; ?> );
+			}
+		}
+		
+		@media all and (min-width: 768px) {
+			.gallery-cover {
+				background-image: url( <?php echo $thumb_url_large; ?> );
+			}
+		}
+		
+		@media all and (min-width: 992px) {
+			.gallery-cover {
+				background-image: url( <?php echo $thumb_url_full; ?> );
+			}
+		}
+	</style>
+	
+	<section class="gallery-cover">
 		<header>
 			<section class="vertical-align">
 				<h2>Get in touch</h2>
