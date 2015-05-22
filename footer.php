@@ -19,10 +19,6 @@
 	// FitVids.js
 	$(".gallery-content").fitVids();
 	<?php } ?>
-	// Preloader
-	$(function(){
-		setTimeout( $('.preloader').fadeOut(), 500);
-	});
 	// Cover image div auto viewport-height
 	$(document).ready(function() {
 		resizeDiv();
