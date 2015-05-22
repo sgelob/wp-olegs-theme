@@ -18,7 +18,6 @@
 </head> 
 
 <body <?php body_class(); ?>>
-<div class="preloader"></div>
 	<header <?php $headercolor = get_post_meta($post->ID, 'dark_header', true); if( ! empty( $headercolor ) ) { echo 'class="dark-header"'; } ?>>
 		<div class="header-inner">
 			<div>
