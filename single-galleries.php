@@ -34,7 +34,6 @@ get_header(); ?>
 		}
 	</style>
 	<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-		<section>
 		<header class="gallery-cover">
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
@@ -104,7 +103,6 @@ get_header(); ?>
 		</section>
 		<div class="clearfix"></div>
 	</div>
-		</section>
 	</article>
 
 <?php endwhile; else: ?>
