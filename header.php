@@ -24,6 +24,9 @@
 				<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
 			</div>
 			<nav>
+				<header>
+					<h1 class="offscreen"><?php _e('Navigation menu', 'olegs'); ?></h1>
+      			</header>
 				<?php wp_nav_menu( array( 
 					'theme_location' => 'primary',
 					'container' => false,
