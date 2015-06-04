@@ -451,6 +451,7 @@ nav {
 .about-content,
 .gallery-content {
 	@extend %text-styles;
+	background: $white;
 	
 	a {
 		color: #336699;
