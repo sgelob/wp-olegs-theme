@@ -34,6 +34,7 @@ get_header(); ?>
 		}
 	</style>
 	<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+		<section>
 		<header class="gallery-cover">
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
@@ -44,7 +45,7 @@ get_header(); ?>
 			</div>
 		</header>
 	
-	<section class="gallery-content">
+	<div class="gallery-content">
 		<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
 		<?php the_content(); ?>
 		<div class="clearfix"></div>
@@ -102,7 +103,8 @@ get_header(); ?>
 			?>
 		</section>
 		<div class="clearfix"></div>
-	</section>
+	</div>
+		</section>
 	</article>
 
 <?php endwhile; else: ?>
