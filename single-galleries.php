@@ -48,18 +48,18 @@ get_header(); ?>
 		<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
 		<?php the_content(); ?>
 		<div class="clearfix"></div>
-		<div class="share">
+		<section class="share">
 			<h3>Share this gallery</h3>
 			<a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink($post->ID)); ?>" target="_blank">Share on Facebook</a>
 			<a class="share-twitter" href="https://twitter.com/intent/tweet/?text=<?php echo urlencode(get_the_title($post->ID)); ?>&url=<?php echo urlencode(wp_get_shortlink($post->ID)); ?>&via=sgelob&hashtags=photography,<?php $terms_as_text = get_the_term_list( $post->ID, 'genre', '', ', ', '' ); echo strip_tags(preg_replace('/\s+/', '', $terms_as_text)); ?>" target="_blank">Share on Twitter</a>
 			<a class="share-google" href="https://plus.google.com/share?url=<?php echo urlencode(get_permalink($post->ID)); ?>" target="_blank">Share on Google+</a>
-		</div>
+		</section>
 		<div class="clearfix"></div>
-		<div class="comments">
+		<section class="comments">
 			<h3>Leave Your Comments</h3>
 			<?php comments_template( '', true ); ?>
-		</div>
-		<div class="related">
+		</section>
+		<section class="related">
 			<h3>See the Related Galleries</h3>
 			<?php
 				$backup = $post;  // backup the current object
@@ -94,7 +94,7 @@ get_header(); ?>
 				$post = $backup;  // copy it back
 				wp_reset_query(); // to use the original query again
 			?>
-		</div>
+		</section>
 		<div class="clearfix"></div>
 	</section>
 	</article>
