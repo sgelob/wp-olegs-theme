@@ -62,11 +62,11 @@
 		</header>
 	</section>
 	
-	<section class="about-content">
+	<div class="about-content">
 		<article>
 			<?php the_content(); ?>
 		</article>
-	</section>
+	</div>
 </div>
 
 <?php endwhile; // end of the loop. ?>
