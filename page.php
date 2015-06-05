@@ -15,7 +15,7 @@ get_header(); ?>
 			</p>
 			</div>
 		</header>
-	<div class="gallery-content">
+	<div class="about-content">
 		<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
 		<?php the_content(); ?>
 		<div class="clearfix"></div>
