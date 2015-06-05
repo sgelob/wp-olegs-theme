@@ -49,6 +49,7 @@
 					'link_after' => '',
 					'items_wrap' => '<ul class="about-get-in-touch">%3$s</ul>',
 					'echo' => true,
+					'walker' => new My_Walker_Nav_Menu(),
 		) );
 				?>
 			</div>
