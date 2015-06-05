@@ -269,7 +269,7 @@ function my_add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
 }
 	
-//* Thumbnails anteprima nelle liste dei post e pagine *//
+// Thumbnails anteprima nelle liste dei post e pagine
 
 if ( !function_exists('fb_AddThumbColumn') && function_exists('add_theme_support') ) {
  
@@ -322,6 +322,25 @@ add_filter( 'the_content', 'img_p_class_content_filter' ,20);
 function img_p_class_content_filter($content) {
     $content = preg_replace("/(<p[^>]*)(\>.*)(\<img.*)(<\/p>)/im", "\$1 class='img-wrap'\$2\$3\$4", $content);
     return $content;
+}
+
+// Add itemprop="url" to Social links list in About
+
+class My_Walker_Nav_Menu extends Walker_Nav_Menu {
+function start_lvl(&$output, $depth) {
+  $indent = str_repeat("\t", $depth);
+  $output .= "\n$indent<ul class=\"about-get-in-touch\">\n";
+}
+function start_el(&$output, $item, $depth, $args) {
+  $output.= '<li>';
+  $attributes = ' itemprop="url" target="_blank" href="' .esc_attr($item->url). '" title="' .esc_attr($item->attr_title). '"';
+  $item_output = $args->before;
+  $current_url = (is_ssl()?'https://':'http://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+  $item_url = esc_attr( $item->url );
+  $item_output.= '<a'. $attributes .'>'.$item->title.'</a>';
+  $item_output.= $args->after;
+  $output.= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+}
 }
 
 ?>
