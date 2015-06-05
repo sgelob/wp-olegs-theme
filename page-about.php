@@ -55,7 +55,7 @@
 			</div>
 			<div>
 				<h1>
-					<strong itemprop="name"><?php the_title(); ?></strong>
+					<span itemprop="name"><strong><?php the_title(); ?></strong></span>
 					<br>
 					<span itemprop="jobTitle"><?php the_excerpt_rss(); ?></span>
 				</h1>
