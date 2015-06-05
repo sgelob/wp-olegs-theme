@@ -37,9 +37,9 @@
 		}
 	</style>
 	
-	<section class="gallery-cover">
+	<section class="gallery-cover" itemscope itemtype="http://schema.org/Person">
 		<header>
-			<section class="vertical-align">
+			<div class="vertical-align">
 				<h2>Get in touch</h2>
 			<?php wp_nav_menu( array( 
 					'theme_location' => 'footer-social',
@@ -50,9 +50,13 @@
 					'echo' => true,
 		) );
 				?>
-			</section>
+			</div>
 			<div>
-				<h1><strong><?php the_title(); ?></strong> <br><span><?php the_excerpt_rss(); ?></span></h1>
+				<h1>
+					<strong itemprop="name"><?php the_title(); ?></strong>
+					<br>
+					<span itemprop="jobTitle"><?php the_excerpt_rss(); ?></span>
+				</h1>
 			</div>
 		</header>
 	</section>
