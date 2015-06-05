@@ -37,7 +37,8 @@
 		}
 	</style>
 	
-	<section class="gallery-cover" itemscope itemtype="http://schema.org/Person">
+<div itemscope itemtype="http://schema.org/Person">
+	<section class="gallery-cover">
 		<header>
 			<div class="vertical-align">
 				<h2>Get in touch</h2>
@@ -66,6 +67,7 @@
 			<?php the_content(); ?>
 		</article>
 	</section>
+</div>
 
 <?php endwhile; // end of the loop. ?>
           
