@@ -11,7 +11,7 @@ get_header(); ?>
 			$recent_posts = new WP_Query(array(
 				'paged' => $paged,
 				'post_type' => 'galleries',
-				'posts_per_page' => 8,
+				'posts_per_page' => 12,
 				'orderby' => 'date'
 			));
 			$max = $recent_posts->max_num_pages;
