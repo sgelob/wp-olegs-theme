@@ -453,11 +453,14 @@ nav {
 	@extend %text-styles;
 	background: $white;
 	
-	a {
-		color: #336699;
-		
-		&:hover {
+	p {
+		a {
+			color: #336699;
 			text-decoration: underline;
+		
+			&:hover {
+				background: yellow;
+			}
 		}
 	}
 	
