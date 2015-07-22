@@ -80,10 +80,9 @@ function theme_queue_js(){
 }
 add_action('wp_print_scripts', 'theme_queue_js');
 
-/* Thumbnails & Post Formats */
+/* Thumbnails */
 
-add_theme_support( 'post-thumbnails' ); // Posts and Quotes
-add_theme_support( 'post-formats', array( 'quote' ) );
+add_theme_support( 'post-thumbnails' );
 
 // add post-formats to post_type 'page'
 add_post_type_support( 'post', 'post-formats' );
@@ -219,6 +218,35 @@ function ideal_register_my_post_types() {
         'supports' => array( 'title', 'page-attributes', 'custom-fields', 'editor', 'excerpt', 'thumbnail', 'comments' )
 		)
 	);
+	
+	register_post_type( 'quotes',
+		array(
+			'labels' => array(
+        'name' => 'Quotes',
+        'singular_name' => 'Quote',
+        'add_new' => 'Add New Quote',
+        'add_new_item' => 'Add New Quote',
+        'edit_item' => 'Edit Quote',
+        'new_item' => 'New Quote',
+        'all_items' => 'All Quotes',
+        'view_item' => 'View Quote',
+        'search_items' => 'Search Quotes',
+        'not_found' =>  'No quote found',
+        'not_found_in_trash' => 'No quotes found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Quotes'
+    ),
+		'public' => true,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-format-quote',
+        'taxonomies' => array( 'quote-author' ),
+        'rewrite' => array( 'slug' => 'quote' ),
+        'supports' => array( 'title', 'page-attributes', 'editor')
+		)
+	);
 }
 
 // 9. CUSTOM TAXONOMIES //
@@ -261,6 +289,24 @@ function register_my_taxonomies() {
 			'has_archive' => true,
 			'query_var' => true,
 			'rewrite' => array( 'slug' => 'photos/country' ),
+		)
+	);
+	register_taxonomy('quote-author',
+		array( 'quotes' ),
+		array(
+			'labels' => array(
+				'name' => __( 'Quote Authors' ),
+				'singular_name' => __( 'Quote Author' )
+			),
+			'public' => true,
+			'show_ui' => true,
+			'hierarchical' => false,
+			'show_in_nav_menus' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => false,
+			'has_archive' => true,
+			'query_var' => true,
+			'rewrite' => array( 'slug' => 'quote-author' ),
 		)
 	);
 }
