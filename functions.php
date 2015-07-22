@@ -80,9 +80,13 @@ function theme_queue_js(){
 }
 add_action('wp_print_scripts', 'theme_queue_js');
 
-/* Thumbnails */
-	
-add_theme_support('post-thumbnails');
+/* Thumbnails & Post Formats */
+
+add_theme_support( 'post-thumbnails' ); // Posts and Quotes
+add_theme_support( 'post-formats', array( 'quote' ) );
+
+// add post-formats to post_type 'page'
+add_post_type_support( 'post', 'post-formats' );
 
 /* THUMBNAIL SIZES */
 add_image_size( 'square-320', 320, 320, true);
@@ -342,5 +346,9 @@ function start_el(&$output, $item, $depth, $args) {
   $output.= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 }
 }
+
+// Remove some WordPress SEO columns in Posts list
+
+add_filter( 'wpseo_use_page_analysis', '__return_false' );
 
 ?>
