@@ -240,7 +240,7 @@ function ideal_register_my_post_types() {
         'show_ui' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'menu_icon' => 'dashicons-format-quote',
         'taxonomies' => array( 'quote-author' ),
         'rewrite' => array( 'slug' => 'quote' ),
