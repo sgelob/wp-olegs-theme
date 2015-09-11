@@ -238,13 +238,13 @@ function ideal_register_my_post_types() {
     ),
 		'public' => true,
         'show_ui' => true,
-        'publicly_queryable' => true,
+        'publicly_queryable' => false,
         'exclude_from_search' => true,
         'has_archive' => false,
         'menu_icon' => 'dashicons-format-quote',
         'taxonomies' => array( 'quote-author' ),
         'rewrite' => array( 'slug' => 'quote' ),
-        'supports' => array( 'title', 'page-attributes', 'editor')
+        'supports' => array( 'title', 'editor' )
 		)
 	);
 }
