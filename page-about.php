@@ -41,7 +41,7 @@
 	<section class="gallery-cover">
 		<header>
 			<div class="vertical-align">
-				<h2>Get in touch</h2>
+				<h2><?php $theshorttitle = get_post_meta($post->ID, 'about_contacts_title', true); echo $theshorttitle; ?></h2>
 			<?php wp_nav_menu( array( 
 					'theme_location' => 'footer-social',
 					'container' => false,
