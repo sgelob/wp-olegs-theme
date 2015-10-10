@@ -12,7 +12,7 @@ get_header(); ?>
 				<h1><?php echo $term->name; ?></h1>
 				<p><?php echo $term->description; ?></p>
 			</header>
-			<?php query_posts(array( 'post_type'=>'galleries', 'country' => $term->slug, 'posts_per_page' => -1 )); ?>
+			<?php query_posts(array( 'post_type'=>'galleries', 'country' => $term->slug, 'posts_per_page' => 500 )); ?>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'inc/box' ); ?>
 			<?php endwhile; else: ?>
