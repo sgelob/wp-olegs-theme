@@ -33,6 +33,8 @@ get_header(); ?>
 				</header>
 				<?php
 					$args = array(
+						'no_found_rows' => true,
+						'update_post_meta_cache' => false,
 						'post_type' => 'galleries',
 						'posts_per_page' => 4,
 						'orderby' => 'rand',
