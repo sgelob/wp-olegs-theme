@@ -9,6 +9,8 @@ get_header(); ?>
 		<?php
 			$paged = get_query_var('page')?get_query_var('page'):1;
 			$recent_posts = new WP_Query(array(
+				'update_post_meta_cache' => false,
+				'update_post_term_cache' => false,
 				'paged' => $paged,
 				'post_type' => 'galleries',
 				'posts_per_page' => 12,
