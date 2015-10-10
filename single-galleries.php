@@ -35,9 +35,9 @@ get_header(); ?>
 		<header class="gallery-cover">
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
-			<p>by <a rel="author" href="/about/">Oleg Belousov</a> · 
+			<p><?php _e('by', 'olegs'); ?> <a rel="author" href="/about/"><?php $author = get_the_author(); echo $author; ?></a> · 
 				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time>
-				<span>Gallery in <?php the_terms( $post->ID, 'genre', '', '', '' ); ?> – <?php the_terms( $post->ID, 'country', '', '', '' ); ?></span>
+				<span><?php _e('Gallery in', 'olegs'); ?> <?php the_terms( $post->ID, 'genre', '', '', '' ); ?> – <?php the_terms( $post->ID, 'country', '', '', '' ); ?></span>
 			</p>
 			</div>
 		</header>
@@ -48,26 +48,26 @@ get_header(); ?>
 		<div class="clearfix"></div>
 		<section class="share">
 			<header>
-				<h3>Share this gallery</h3>
+				<h3><?php _e('Share this gallery', 'olegs'); ?></h3>
 			</header>
-			<a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink($post->ID)); ?>" target="_blank">Share on Facebook</a>
-			<a class="share-twitter" href="https://twitter.com/intent/tweet/?text=<?php echo urlencode(get_the_title($post->ID)); ?>&url=<?php echo urlencode(wp_get_shortlink($post->ID)); ?>&via=sgelob&hashtags=photography,<?php $terms_as_text = get_the_term_list( $post->ID, 'genre', '', ', ', '' ); echo strip_tags(preg_replace('/\s+/', '', $terms_as_text)); ?>" target="_blank">Share on Twitter</a>
-			<a class="share-google" href="https://plus.google.com/share?url=<?php echo urlencode(get_permalink($post->ID)); ?>" target="_blank">Share on Google+</a>
+			<a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink($post->ID)); ?>" target="_blank"><?php _e('Share on Facebook', 'olegs'); ?></a>
+			<a class="share-twitter" href="https://twitter.com/intent/tweet/?text=<?php echo urlencode(get_the_title($post->ID)); ?>&url=<?php echo urlencode(wp_get_shortlink($post->ID)); ?>&via=sgelob&hashtags=photography,<?php $terms_as_text = get_the_term_list( $post->ID, 'genre', '', ', ', '' ); echo strip_tags(preg_replace('/\s+/', '', $terms_as_text)); ?>" target="_blank"><?php _e('Share on Twitter', 'olegs'); ?></a>
+			<a class="share-google" href="https://plus.google.com/share?url=<?php echo urlencode(get_permalink($post->ID)); ?>" target="_blank"><?php _e('Share on Google+', 'olegs'); ?></a>
 		</section>
 		<div class="clearfix"></div>
 		<section class="comments">
 			<header>
-				<h3>Leave Your Comments</h3>
+				<h3><?php _e('Leave Your Comments', 'olegs'); ?></h3>
 			</header>
 			<?php comments_template( '', true ); ?>
 		</section>
 		<section class="related">
 			<header>
-				<h3>See the Related Galleries</h3>
+				<h3><?php _e('See the Related Galleries', 'olegs'); ?></h3>
 			</header>
 			<?php
 				$backup = $post;  // backup the current object
-				$found_none = '<h2>No related galleries found!</h2>';
+				$found_none = _e('<h2>No related galleries found!</h2>', 'olegs');
 				$taxonomy = 'genre';//  e.g. post_tag, category, custom taxonomy
 				$param_type = 'genre'; //  e.g. tag__in, category__in, but genre__in will NOT work
 				$tax_args = array('orderby' => 'none');
@@ -104,7 +104,7 @@ get_header(); ?>
 	</article>
 
 <?php endwhile; else: ?>
-	<h3>Sorry, no matched your criteria.</h3>
+	<h3><?php _e('Sorry, no matched your criteria.', 'olegs'); ?></h3>
 <?php endif; wp_reset_query(); ?>
           
 <?php get_footer(); ?>
