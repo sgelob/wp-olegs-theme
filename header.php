@@ -21,7 +21,7 @@
 	<header <?php $headercolor = get_post_meta($post->ID, 'dark_header', true); if( ! empty( $headercolor ) ) { echo 'class="dark-header"'; } ?>>
 		<div class="header-inner">
 			<div>
-				<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
+				<a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 			</div>
 			<nav>
 				<header>
