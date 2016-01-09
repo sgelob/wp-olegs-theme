@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		concat: {
 			js: {
-				src: ['bower_components/fitvids/jquery.fitvids.js', 'bower_components/cookieconsent2/cookieconsent.js'],
+				src: ['bower_components/fitvids/jquery.fitvids.js'],
 				dest: 'build/js/scripts.js',
     		}
   		},
