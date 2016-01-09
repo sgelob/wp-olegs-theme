@@ -18,9 +18,9 @@ function olegs_register_files() {
 		0.1,
 		true
 	);
-	if ( is_singular( 'galleries' ) ) {
+//	if ( is_singular( 'galleries' ) ) {
 		wp_enqueue_script('custom-scripts');
-	}
+//	}
 }
 
 add_action( 'wp_enqueue_scripts', 'olegs_register_files' );
@@ -367,6 +367,7 @@ if ( !function_exists('fb_AddThumbColumn') && function_exists('add_theme_support
 }
 
 // Apply class to every paragraph that holds image
+
 add_filter( 'the_content', 'img_p_class_content_filter' ,20);
 
 function img_p_class_content_filter($content) {
