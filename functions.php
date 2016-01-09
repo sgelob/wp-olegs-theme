@@ -18,9 +18,9 @@ function olegs_register_files() {
 		0.1,
 		true
 	);
-//	if ( is_singular( 'galleries' ) ) {
+	if ( is_singular( 'galleries' ) ) {
 		wp_enqueue_script('custom-scripts');
-//	}
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'olegs_register_files' );
