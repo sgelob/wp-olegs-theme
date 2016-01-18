@@ -474,6 +474,8 @@ nav {
 		padding: 2em 0 0.5em 0;
 	}
 	
+	h1,
+	h2,
 	p,
 	ul,
 	blockquote,
@@ -696,6 +698,29 @@ blockquote {
 	
 	footer {
 		text-align: right;
+	}
+}
+
+/* Blog */
+
+.single-post {
+	.about-content {
+		padding-top: 1em;
+		
+		header {
+			p {
+				font-size: 75%;
+				text-align: center;
+			}
+		}
+	}
+	
+	h1 {
+		font-weight: 300;
+		line-height: normal;
+		margin-bottom: 0;
+		text-align: center;
+    	text-transform: uppercase;
 	}
 }
 
