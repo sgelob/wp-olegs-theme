@@ -11,7 +11,7 @@ get_header(); ?>
 		<header>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
 			<p><?php _e('by', 'olegs'); ?> <a rel="author" href="/about/"><?php $author = get_the_author(); echo $author; ?></a> · 
-				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time>
+				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time> · 
 				<span><?php _e('Article in', 'olegs'); ?> <?php the_category(', ') ?></span>
 			</p>
 		</header>
