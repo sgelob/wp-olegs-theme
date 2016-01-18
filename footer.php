@@ -16,8 +16,10 @@
 <?php wp_footer(); ?>
 <script>
 	<?php if ( is_single() ) { ?>
-	// FitVids.js
-	$(".gallery-content").fitVids();
+	$(document).ready(function(){
+		// FitVids.js
+		$(".gallery-content").fitVids();
+	});
 	<?php } ?>
 	// Cover image div auto viewport-height
 	$(document).ready(function() {
