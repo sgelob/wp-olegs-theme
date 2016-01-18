@@ -6,7 +6,7 @@
 	*/
 get_header(); ?>
 	
-	<?php $recent_posts = new WP_Query(array('paged' => $paged, 'post_type' => 'post', 'posts_per_page' => 12, 'post_status' => 'draft'));
+	<?php $recent_posts = new WP_Query(array('paged' => $paged, 'post_type' => 'post', 'posts_per_page' => 12));
 	if ( $recent_posts->have_posts() ) : while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
 ?>
 
@@ -15,7 +15,7 @@ get_header(); ?>
 		<header>
 			<h1 itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 			<p><?php _e('by', 'olegs'); ?> <a rel="author" href="/about/"><?php $author = get_the_author(); echo $author; ?></a> · 
-				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time>
+				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time> · 
 				<span><?php _e('Article in', 'olegs'); ?> <?php the_category(', ') ?></span>
 			</p>
 		</header>
