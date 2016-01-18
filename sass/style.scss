@@ -263,6 +263,7 @@ nav {
 		
 		.gallery-content & {
 			font-size: 1.2em!important;
+			margin: 0;
 		}
 	}
 }
@@ -478,6 +479,7 @@ nav {
 	h2,
 	p,
 	ul,
+	ol,
 	blockquote,
 	.share,
 	#disqus_thread {
@@ -703,9 +705,12 @@ blockquote {
 
 /* Blog */
 
-.single-post {
+.category,
+.single-post,
+.page-template-page-blog {
 	.about-content {
 		padding-top: 1em;
+		padding-bottom: 1em;
 		
 		header {
 			p {
@@ -715,12 +720,36 @@ blockquote {
 		}
 	}
 	
-	h1 {
-		font-weight: 300;
+	h1 {    	
+    	font-size: 1.3em;
+		font-weight: 400;
 		line-height: normal;
-		margin-bottom: 0;
 		text-align: center;
-    	text-transform: uppercase;
+		text-transform: uppercase;
+		margin: 0.8em auto;
+			
+		@include responsive(small-screens) {
+			font-size: 1.6em;
+		}
+			
+		@include responsive(medium-screens) {
+			font-size: 2em;
+		}
+    	
+    	a {
+	    	&:hover {
+		    	text-decoration: underline;
+	    	}
+    	}
+	}
+}
+
+.single-post,
+.category {
+	.menu-item-1313 {
+		a {
+			text-decoration: underline;
+		}
 	}
 }
 
