@@ -79,6 +79,20 @@ a {
 	overflow: hidden;
 }
 
+pre {
+    border: 1px solid #d1d1d1;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.3125;
+    margin: 0 0 1.75em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1.75em;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 /* Header */
 
 .header-inner {
@@ -190,6 +204,14 @@ nav {
 .tax-genre,
 .tax-country {
 	.menu-item-16 {
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+.page-template-page-about {
+	.menu-item-17 {
 		a {
 			text-decoration: underline;
 		}
@@ -407,7 +429,7 @@ nav {
 	padding: 0;
 	
 	li {
-		padding: 0.5em;
+		padding: 0.4em;
 		display: inline-block;
 		
 		a {
@@ -472,7 +494,7 @@ nav {
 		font-weight: 400;
 		text-align: center;
 		text-transform: uppercase;
-		padding: 2em 0 0.5em 0;
+		padding: .6em 0 .2em 0;
 	}
 	
 	h1,
@@ -480,7 +502,9 @@ nav {
 	p,
 	ul,
 	ol,
+	pre,
 	blockquote,
+	.gist,
 	.share,
 	#disqus_thread {
 		max-width: 50rem;
