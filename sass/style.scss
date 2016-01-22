@@ -18,6 +18,12 @@ body {
 	font-family: $font-stack;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+	
+	&.category,
+	&.single-post,
+	&.page-template-page-blog {
+		background-color: $link-color;
+	}
 }
 
 h1,
@@ -731,16 +737,12 @@ blockquote {
 
 .category,
 .single-post,
-.page-template-page-blog {
-	header {
-		background-color: $link-color;
-	}
-	
+.page-template-page-blog {	
 	.about-content {
 		padding-top: 1em;
 		padding-bottom: 1em;
 		
-		header {
+		header {			
 			p {
 				font-size: 75%;
 				text-align: center;
