@@ -20,13 +20,26 @@ get_header(); ?>
 		<?php
 			$args = array(
 				'post_type' => 'quotes',
-				'orderby' => 'rand'
+				'orderby' => 'rand',
+				'posts_per_page' => -1
 			);
 			$the_query = new WP_Query($args);
 			if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			<blockquote>
 				<?php the_content(); ?>
-				<footer>— <cite><?php echo $term->name; ?></cite></footer>
+				<footer>— <?php 
+					$quote_sources = wp_get_object_terms( $post->ID,  'quote-author' );
+						if ( ! empty( $quote_sources ) ) {
+							if ( ! is_wp_error( $quote_sources ) ) {
+								echo '<cite>';
+									foreach( $quote_sources as $term ) {
+										echo esc_html( $term->name );
+									}
+								echo '</cite>';
+							}
+						}
+					?>
+				</footer>
 			</blockquote>
 			<div class="clearfix"></div>
 <?php endwhile; else: ?>
