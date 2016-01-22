@@ -480,7 +480,7 @@ nav {
 	
 	p {
 		a {
-			color: #336699;
+			color: $link-color;
 			text-decoration: underline;
 		
 			&:hover {
@@ -732,6 +732,10 @@ blockquote {
 .category,
 .single-post,
 .page-template-page-blog {
+	header {
+		background-color: $link-color;
+	}
+	
 	.about-content {
 		padding-top: 1em;
 		padding-bottom: 1em;
