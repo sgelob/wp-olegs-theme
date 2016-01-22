@@ -27,11 +27,11 @@ get_header(); ?>
 			if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			<blockquote>
 				<?php the_content(); ?>
-				<footer>— <?php 
+				<footer><?php 
 					$quote_sources = wp_get_object_terms( $post->ID,  'quote-author' );
 						if ( ! empty( $quote_sources ) ) {
 							if ( ! is_wp_error( $quote_sources ) ) {
-								echo '<cite>';
+								echo '— <cite>';
 									foreach( $quote_sources as $term ) {
 										echo esc_html( $term->name );
 									}
