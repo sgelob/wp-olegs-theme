@@ -60,7 +60,6 @@ get_header(); ?>
 			</header>
 			<?php
 				$backup = $post;  // backup the current object
-// 				$found_none = _e('<h2>No related galleries found!</h2>', 'olegs');
 				$taxonomy = 'genre';//  e.g. post_tag, category, custom taxonomy
 				$param_type = 'genre'; //  e.g. tag__in, category__in, but genre__in will NOT work
 				$tax_args = array('orderby' => 'none');
@@ -68,7 +67,7 @@ get_header(); ?>
 				if ($tags) {
 					foreach ($tags as $tag) {
 						$args = array(
-							'$param_type' => $tag->slug,
+							"$param_type" => $tag->slug,
 							'post__not_in' => array($post->ID),
 							'post_type' => 'galleries',
 							'posts_per_page' => 4,
@@ -85,11 +84,6 @@ get_header(); ?>
 						}
 					}
 				}
-/*
-				if ($found_none) {
-					echo $found_none;
-				}
-*/
 				$post = $backup;  // copy it back
 				wp_reset_query(); // to use the original query again
 			?>
