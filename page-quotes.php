@@ -10,8 +10,8 @@ get_header(); ?>
 		<header class="gallery-cover">
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
-			<p>by <a rel="author" href="/about/">Oleg Belousov</a> · 
-				Last modified: <time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_modified_date(); ?></time>
+			<p><?php _e('by', 'olegs'); ?> <a rel="author" href="/about/"><?php $author = get_the_author(); echo $author; ?></a> · 
+				<?php _e('Last modified:', 'olegs'); ?> <time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_modified_date(); ?></time>
 			</p>
 			</div>
 		</header>
