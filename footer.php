@@ -18,7 +18,7 @@
 	<?php if ( is_single() ) { ?>
 	$(document).ready(function(){
 		// FitVids.js
-		$(".gallery-content").fitVids();
+		$("article").fitVids();
 	});
 	<?php } ?>
 	// Cover image div auto viewport-height
