@@ -44,6 +44,8 @@ a {
 	
 	@include transition(all, 1s, ease);
 	
+	@include word-wrap();
+	
 	img {
 		-webkit-transform: translateZ(0);
 	}
@@ -85,18 +87,8 @@ a {
 	overflow: hidden;
 }
 
-pre {
-    border: 1px solid #d1d1d1;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.3125;
-    margin: 0 0 1.75em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1.75em;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+.wp-embedded-content {
+	width: 100%;
 }
 
 /* Header */
@@ -132,7 +124,7 @@ pre {
 		}
 	
 		a {
-			color: #aaaaa9;
+			color: $lighter-grey;
 			display: inline-block;
 			vertical-align: middle;
 			font-size: 2em;
@@ -508,7 +500,7 @@ nav {
 	p,
 	ul,
 	ol,
-	pre,
+	iframe,
 	blockquote,
 	.gist,
 	.share,
