@@ -541,7 +541,7 @@ nav {
 		.alignleft,
 		.alignright {
 			@include responsive(small-screens) {
-				max-width: 50%;
+				max-width: 49%;
 			}
 		}
 		
