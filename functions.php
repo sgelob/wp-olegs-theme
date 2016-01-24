@@ -3,7 +3,7 @@
 // jQuery
 function my_jquery_enqueue() {
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', 'http://code.jquery.com/jquery-1.12.0.min.js', false, null);
+	wp_register_script('jquery', 'http://code.jquery.com/jquery-1.12.0.min.js', false, null, true);
 	wp_enqueue_script('jquery');
 }
 
