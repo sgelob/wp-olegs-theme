@@ -43,7 +43,7 @@
     // Google Fonts
     WebFontConfig = {
         google: {
-            families: ['Lato:400,100,300,700:latin']
+            families: ['Lato:400,300,700:latin']
         }
     };
     (function() {
