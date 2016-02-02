@@ -6,7 +6,7 @@ get_header(); ?>
 <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 	
 <section id="boxes-grid">
-	<main class="wrap" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+	<main class="wrap" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="https://schema.org/Blog">
 		<section class="genre-block">
 			<header>
 				<h1><?php echo $term->name; ?></h1>
