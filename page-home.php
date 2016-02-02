@@ -5,7 +5,7 @@
 	*/
 get_header(); ?>	
 <section id="boxes-grid">
-	<main class="wrap" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+	<main class="wrap" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="https://schema.org/Blog">
 		<?php
 			$paged = get_query_var('page')?get_query_var('page'):1;
 			$recent_posts = new WP_Query(array(
