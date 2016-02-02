@@ -11,7 +11,7 @@
 	<title><?php wp_title(''); ?></title>
 	<!-- Enable media queries for old IE -->
 	<!--[if lt IE 9]>
-		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 	<link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
 <?php wp_head(); ?>
