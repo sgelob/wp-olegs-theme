@@ -6,7 +6,7 @@
 get_header(); ?>	
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
-	<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 	<div class="about-content">
 		<header>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
