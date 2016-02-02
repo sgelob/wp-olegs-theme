@@ -6,7 +6,7 @@
 	*/
 get_header(); ?>
 
-	<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 		<header class="gallery-cover">
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
