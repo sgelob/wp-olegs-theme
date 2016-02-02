@@ -3,7 +3,7 @@
 	$thumb_url = $thumb['0'];
 ?>
 
-<article class="box" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<article class="box" itemprop="blogPost" itemscope="itemscope" itemtype="https://schema.org/BlogPosting">
 	<a class="box-inner" href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark">
 		<img class="lazyload" src="<?php echo str_replace(".jpg", "-768x768.jpg", $thumb_url); ?>"
 			srcset="<?php echo str_replace(".jpg", "-320x320.jpg", $thumb_url); ?> 320w,
