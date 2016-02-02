@@ -37,7 +37,7 @@
 		}
 	</style>
 	
-<div itemscope itemtype="http://schema.org/Person">
+<div itemscope itemtype="https://schema.org/Person">
 	<section class="gallery-cover">
 		<header>
 			<div class="vertical-align">
