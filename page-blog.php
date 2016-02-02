@@ -10,7 +10,7 @@ get_header(); ?>
 	if ( $recent_posts->have_posts() ) : while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
 ?>
 
-	<article itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 	<div class="about-content">
 		<header>
 			<h1 itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
