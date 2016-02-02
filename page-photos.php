@@ -15,7 +15,7 @@ get_header(); ?>
 -->
 
 <section id="boxes-grid">
-	<main class="wrap" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
+	<main class="wrap" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="https://schema.org/Blog">
 		<?php
 			/*
 			* Loop through Categories and Display Posts within
