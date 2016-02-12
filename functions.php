@@ -378,11 +378,12 @@ function img_p_class_content_filter($content) {
 // Add itemprop="url" to Social links list in About
 
 class My_Walker_Nav_Menu extends Walker_Nav_Menu {
-function start_lvl(&$output, $depth) {
+function start_lvl(&$output, $depth = 0, $args = array()) {
   $indent = str_repeat("\t", $depth);
   $output .= "\n$indent<ul class=\"about-get-in-touch\">\n";
 }
-function start_el(&$output, $item, $depth, $args) {
+
+function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
   $output.= '<li>';
   $attributes = ' itemprop="url" target="_blank" href="' .esc_attr($item->url). '" title="' .esc_attr($item->attr_title). '"';
   $item_output = $args->before;
@@ -390,7 +391,7 @@ function start_el(&$output, $item, $depth, $args) {
   $item_url = esc_attr( $item->url );
   $item_output.= '<a'. $attributes .'>'.$item->title.'</a>';
   $item_output.= $args->after;
-  $output.= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+  $output.= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id );
 }
 }
 
