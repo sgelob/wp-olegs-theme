@@ -401,12 +401,16 @@ nav {
 
 %button {
 	display: inline-block;
-	padding: 0.8em 1.2em;
+	padding: 0.6em .6em;
 	border: 0;
 	border-bottom-width: 0;
 	border-radius: 0.2em;
 	cursor: pointer;
 	outline: 0;
+	
+	@include responsive(small-screens) {
+		padding: 0.8em 1.2em;
+	}
 }
 
 .page-template-page-about {
@@ -739,8 +743,12 @@ blockquote {
 		
 		header {			
 			p {
-				font-size: 75%;
+				font-size: 90%;
 				text-align: center;
+				
+				@include responsive(small-screens) {
+					font-size: 75%;
+				}
 			}
 		}
 	}
@@ -788,6 +796,17 @@ blockquote {
 			max-width: 50rem!important;
 			margin: 1.2em auto;
 		}
+	}
+}
+
+.sep {
+	color: $light-grey;
+	display: block;
+	line-height: .5em;
+	margin: 0 .2em;
+	
+	@include responsive(small-screens) {
+		display: inline;
 	}
 }
 
