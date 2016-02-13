@@ -93,6 +93,18 @@ a {
 	margin: 1.2em auto;
 }
 
+code {
+	display: block;
+    padding: 1em;
+    margin: 0 0 1em;
+    font-size: 13px;
+    line-height: 1.42857143;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: $lighter-grey;
+    border-radius: 4px;
+}
+
 /* Header */
 
 .header-inner {
