@@ -43,8 +43,6 @@ a {
 	
 	@include transition(all, 1s, ease);
 	
-	@include word-wrap();
-	
 	img {
 		-webkit-transform: translateZ(0);
 	}
@@ -88,6 +86,11 @@ a {
 
 .wp-embedded-content {
 	width: 100%;
+}
+
+%contentcolumn {
+	max-width: 50rem;
+	margin: 1.2em auto;
 }
 
 /* Header */
@@ -475,7 +478,9 @@ nav {
 	@extend %text-styles;
 	background: $white;
 	
-	p {
+	p,
+	ul,
+	ol {
 		a {
 			color: $link-color;
 			text-decoration: underline;
@@ -504,8 +509,7 @@ nav {
 	.gist,
 	.share,
 	#disqus_thread {
-		max-width: 50rem;
-		margin: 1.2em auto;
+		@extend %contentcolumn;
 	}
 	
 	.img-wrap {
@@ -728,7 +732,7 @@ blockquote {
 
 .category,
 .single-post,
-.page-template-page-blog {	
+.page-template-page-blog {
 	.about-content {
 		padding-top: 1em;
 		padding-bottom: 1em;
@@ -770,6 +774,19 @@ blockquote {
 	.menu-item-1313 {
 		a {
 			text-decoration: underline;
+		}
+	}
+}
+
+.single-post {
+	a {
+		@include word-wrap();
+	}
+	
+	p {
+		&.img-wrap {
+			max-width: 50rem!important;
+			margin: 1.2em auto;
 		}
 	}
 }
