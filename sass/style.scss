@@ -405,6 +405,10 @@ nav {
 		
 		span {
 			display: block;
+			
+			.single-galleries & {
+				display: inline;
+			}
 		}
 	}
 }
