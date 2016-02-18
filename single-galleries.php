@@ -32,10 +32,14 @@ get_header(); ?>
 		}
 	</style>
 	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
+		<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="<?php the_permalink() ?>"/>
 		<header class="gallery-cover">
+			<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="<?php echo $thumb_url_full; ?>">
+			</span>
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
-			<p><?php _e('by', 'olegs'); ?> <a rel="author" href="/about/"><?php $author = get_the_author(); echo $author; ?></a> · 
+			<p><?php _e('by', 'olegs'); ?> <a itemprop="author" itemscope itemtype="https://schema.org/Person" rel="author" href="/about/"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></a> · 
 				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time>
 				<span><?php _e('Gallery in', 'olegs'); ?> <?php the_terms( $post->ID, 'genre', '', '', '' ); ?> – <?php the_terms( $post->ID, 'country', '', '', '' ); ?></span>
 			</p>
@@ -43,7 +47,7 @@ get_header(); ?>
 		</header>
 	
 	<div class="gallery-content">
-		<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
+		<p class="excerpt" itemprop="description"><?php echo get_the_excerpt(); ?></p>
 		<?php the_content(); ?>
 		<div class="clearfix"></div>
 		<?php get_template_part( 'inc/share' ); ?>
