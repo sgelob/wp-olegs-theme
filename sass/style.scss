@@ -14,9 +14,13 @@
 body {
 	background: $dark;
 	color: #555;
-	font-family: $font-stack;
+	font-family: $font-stack-mobile-first;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+	
+	@include responsive(small-screens) {
+		font-family: $font-stack!important;
+	}
 	
 	&.category,
 	&.single-post,
@@ -30,7 +34,11 @@ h2,
 h3,
 h4,
 .share {
-	font-family: $font-stack!important;
+	font-family: $font-stack-mobile-first;
+	
+	@include responsive(small-screens) {
+		font-family: $font-stack!important;
+	}
 }
 
 section {
