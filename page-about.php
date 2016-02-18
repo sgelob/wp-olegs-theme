@@ -39,6 +39,11 @@
 	
 <div itemscope itemtype="https://schema.org/Person">
 	<section class="gallery-cover">
+		<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="<?php echo $thumb_url_full; ?>">
+				<meta itemprop="width" content="1620">
+				<meta itemprop="height" content="1080">
+			</span>
 		<header>
 			<div class="vertical-align">
 				<h2><?php $theshorttitle = get_post_meta($post->ID, 'about_contacts_title', true); echo $theshorttitle; ?></h2>
