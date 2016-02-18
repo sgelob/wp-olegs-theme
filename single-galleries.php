@@ -36,12 +36,23 @@ get_header(); ?>
 		<header class="gallery-cover">
 			<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 				<meta itemprop="url" content="<?php echo $thumb_url_full; ?>">
+				<meta itemprop="width" content="1620">
+				<meta itemprop="height" content="1080">
 			</span>
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
-			<p><?php _e('by', 'olegs'); ?> <a itemprop="author" itemscope itemtype="https://schema.org/Person" rel="author" href="/about/"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></a> · 
+			<p><?php _e('by', 'olegs'); ?> <a itemprop="author" itemprop="publisher" itemscope itemtype="https://schema.org/Person" rel="author" href="/about/"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></a> · 
 				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time>
-				<span><?php _e('Gallery in', 'olegs'); ?> <?php the_terms( $post->ID, 'genre', '', '', '' ); ?> – <?php the_terms( $post->ID, 'country', '', '', '' ); ?></span>
+				<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>"/>
+				<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization"/>
+					<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+						<meta itemprop="url" content="<?php echo get_stylesheet_directory_uri(); ?>/img/olegs-belousovs-portrait.jpg">
+						<meta itemprop="width" content="1200">
+						<meta itemprop="height" content="1200">
+    				</span>
+					<meta itemprop="name" content="<?php $author = get_the_author(); echo $author; ?>">
+				</span>
+				<span><?php _e('Gallery in', 'olegs'); ?> <?php the_terms( $post->ID, 'genre', '', '', '' ); ?> – <span itemprop="contentLocation"><?php the_terms( $post->ID, 'country', '', '', '' ); ?></span></span>
 			</p>
 			</div>
 		</header>
@@ -62,6 +73,7 @@ get_header(); ?>
 			<header>
 				<h3><?php _e('See the Related Galleries', 'olegs'); ?></h3>
 			</header>
+			<div itemscope itemtype="http://schema.org/WebPage">
 			<?php
 				$backup = $post;  // backup the current object
 				$taxonomy = 'genre';//  e.g. post_tag, category, custom taxonomy
@@ -91,6 +103,7 @@ get_header(); ?>
 				$post = $backup;  // copy it back
 				wp_reset_query(); // to use the original query again
 			?>
+			</div>
 		</section>
 		<div class="clearfix"></div>
 	</div>
