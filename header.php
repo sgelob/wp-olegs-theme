@@ -1,5 +1,10 @@
 <!DOCTYPE HTML> 
-<html <?php language_attributes(); ?>>
+<html <?php
+	if ( is_page_template( 'page-blog.php' ) || is_singular( 'post' ) || is_page( 915 ) || is_category() ) {
+		echo 'lang="it-IT"';
+	} else {
+		echo 'lang="en-US"';
+} ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
