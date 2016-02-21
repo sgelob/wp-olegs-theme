@@ -11,9 +11,9 @@ get_header(); ?>
 	<div class="about-content">
 		<header>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
-			<p><?php _e('by', 'olegs'); ?> <a itemprop="author" itemscope itemprop="publisher" itemtype="https://schema.org/Person" rel="author" href="/about/"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></a>
+			<p><a itemprop="author" itemscope itemprop="publisher" itemtype="https://schema.org/Person" rel="author" href="/about/"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></a>
 				<span class="sep">·</span> 
-				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time>
+				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('j F, Y'); ?></time>
 				<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>"/>
 				<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization"/>
 					<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
@@ -24,7 +24,7 @@ get_header(); ?>
 					<meta itemprop="name" content="<?php $author = get_the_author(); echo $author; ?>">
 				</span>
 				<span class="sep">·</span>
-				<span><?php _e('Article in', 'olegs'); ?> <?php the_category(', ') ?></span>
+				<span><?php _e('Articolo in', 'olegs'); ?> <?php the_category(', ') ?></span>
 			</p>
 		</header>
 		<p class="excerpt" itemprop="description"><?php echo get_the_excerpt(); ?></p>
