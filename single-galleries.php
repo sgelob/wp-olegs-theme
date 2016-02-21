@@ -61,7 +61,12 @@ get_header(); ?>
 		<p class="excerpt" itemprop="description"><?php echo get_the_excerpt(); ?></p>
 		<?php the_content(); ?>
 		<div class="clearfix"></div>
-		<?php get_template_part( 'inc/share' ); ?>
+		<section class="share">
+			<header>
+				<h3><?php _e('Share This Gallery', 'olegs'); ?></h3>
+			</header>
+			<?php get_template_part( 'inc/share' ); ?>
+		</section>
 		<div class="clearfix"></div>
 		<section class="comments">
 			<header>
