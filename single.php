@@ -13,7 +13,7 @@ get_header(); ?>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
 			<p><a itemprop="author" itemscope itemprop="publisher" itemtype="https://schema.org/Person" rel="author" href="/about/"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></a>
 				<span class="sep">·</span> 
-				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('j F, Y'); ?></time>
+				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('d/m/Y'); ?></time>
 				<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>"/>
 				<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization"/>
 					<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
