@@ -11,8 +11,6 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-32x32.png" sizes="32x32" />
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<title><?php wp_title(''); ?></title>
 	<!-- Enable media queries for old IE -->
 	<!--[if lt IE 9]>
