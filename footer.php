@@ -21,6 +21,14 @@
         $("article").fitVids();
         <?php } ?>
         
+        // Scroll to top
+        $(".scroll-top a").click(function () {
+	        $("html, body").animate({
+		        scrollTop: 0
+		    }, 600);
+			return false;
+		});
+        
         // Google Fonts
 		WebFontConfig = {
         	google: {
