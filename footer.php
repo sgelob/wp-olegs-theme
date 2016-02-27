@@ -15,20 +15,7 @@
 </footer>
 <?php wp_footer(); ?>
 <script>
-	window.onload = function() {        
-		<?php if ( is_single() ) { ?>
-		// FitVids.js
-        $("article").fitVids();
-        <?php } ?>
-        
-        // Scroll to top
-        $(".scroll-top a").click(function () {
-	        $("html, body").animate({
-		        scrollTop: 0
-		    }, 600);
-			return false;
-		});
-        
+	window.onload = function() {    
         // Google Fonts
 		WebFontConfig = {
         	google: {
@@ -45,6 +32,19 @@
         s.parentNode.insertBefore(wf, s);
     })();
 	};
+	
+	<?php if ( is_single() ) { ?>
+		// FitVids.js
+        $("article").fitVids();
+        <?php } ?>
+        
+    // Scroll to top
+    $(".scroll-top a").click(function () {
+	    $("html, body").animate({
+		    scrollTop: 0
+		}, 600);
+		return false;
+	});
 
     // Google Analytics
     (function(i, s, o, g, r, a, m) {
