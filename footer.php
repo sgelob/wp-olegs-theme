@@ -34,17 +34,9 @@
 	};
 	
 	<?php if ( is_single() ) { ?>
-		// FitVids.js
-        $("article").fitVids();
-        <?php } ?>
-        
-    // Scroll to top
-    $(".scroll-top a").click(function () {
-	    $("html, body").animate({
-		    scrollTop: 0
-		}, 600);
-		return false;
-	});
+	// FitVids.js
+    $("article").fitVids();
+    <?php } ?>
 
     // Google Analytics
     (function(i, s, o, g, r, a, m) {
