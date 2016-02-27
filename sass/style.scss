@@ -337,7 +337,7 @@ nav {
 
 .gallery-cover {
 	box-sizing: border-box;
-	
+	height: 100vh;
 	margin-top: -48px;
 	overflow: hidden;
 	
@@ -355,6 +355,26 @@ nav {
 	@include responsive(medium-screens) {
 		margin-top: -156px;
 	}
+	
+	/* iPad with portrait orientation. */
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+		height: 1024px;
+	}
+	
+	/* iPad with landscape orientation. */
+	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+		height: 768px;
+	}
+	
+	/* iPhone 5 You can also target devices with aspect ratio. */
+	@media screen and (device-aspect-ratio: 40/71) {
+		height: 500px;
+	}
+	
+	/* iPhone 3 CSS rules here */
+	@media only screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1) {
+		height: 320px;
+    }
 	
 	div {
 		padding: 0.5em;
