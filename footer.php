@@ -15,37 +15,18 @@
 </footer>
 <?php wp_footer(); ?>
 <script>
-    <?php if ( is_single() ) { ?>
-    $(document).ready(function() {
-        // FitVids.js
+	window.onload = function() {        
+		<?php if ( is_single() ) { ?>
+		// FitVids.js
         $("article").fitVids();
-    });
-    <?php } ?>
-    // Cover image div auto viewport-height
-    $(document).ready(function() {
-        resizeDiv();
-    });
-    window.onresize = function(event) {
-        resizeDiv();
-    };
-
-    function resizeDiv() {
-        vpw = $(window).width();
-        vph = $(window).height();
-        $('.gallery-cover').css({
-            'height': vph + 'px'
-        });
-        $('.page-template-page-about .gallery-cover header').css({
-            'height': vph + 'px'
-        });
-    }
-
-    // Google Fonts
-    WebFontConfig = {
-        google: {
-            families: ['Lato:400,300,700:latin']
-        }
-    };
+        <?php } ?>
+        
+        // Google Fonts
+		WebFontConfig = {
+        	google: {
+            	families: ['Lato:400,300,700:latin']
+        	}
+    	};
     (function() {
         var wf = document.createElement('script');
         wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
@@ -55,6 +36,7 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
     })();
+	};
 
     // Google Analytics
     (function(i, s, o, g, r, a, m) {
