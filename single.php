@@ -31,6 +31,8 @@ get_header(); ?>
 		<?php the_content(); ?>
 		<?php get_template_part( 'inc/subscribe' ); ?>
 		<div class="clearfix"></div>
+		<p class="scroll-top"><a href=""><?php _e('⇡ Back to top', 'olegs'); ?></a></p>
+		<div class="clearfix"></div>
 		<section class="share">
 			<header>
 				<h3><?php _e('Condividi questo articolo', 'olegs'); ?></h3>
