@@ -13,7 +13,6 @@ get_header(); ?>
 		$thumb_url_large = $thumb_large['0'];
 		$thumb_url_medium = $thumb_medium['0'];
 	?>
-	
 	<style>
 		.gallery-cover {
 			background-image: url( <?php echo $thumb_url_medium; ?> );
@@ -60,6 +59,8 @@ get_header(); ?>
 	<div class="gallery-content">
 		<p class="excerpt" itemprop="description"><?php echo get_the_excerpt(); ?></p>
 		<?php the_content(); ?>
+		<div class="clearfix"></div>
+		<p class="scroll-top"><a href="">⇡ Back to top</a></p>
 		<div class="clearfix"></div>
 		<section class="share">
 			<header>
