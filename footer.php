@@ -33,6 +33,18 @@
     })();
 	};
 	
+	/* Fix iOS 7 bug for -unit support */
+	var iOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
+	if(iOS) {
+		function iosVhHeightBug() {
+			var height = $(window).height();
+			$(".gallery-cover").css('height', height);
+		}
+		
+		iosVhHeightBug();
+		$(window).bind('resize', iosVhHeightBug);
+	}
+	
 	<?php if ( is_single() ) { ?>
 	// FitVids.js
     $("article").fitVids();
