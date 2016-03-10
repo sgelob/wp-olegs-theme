@@ -30,7 +30,7 @@ get_header(); ?>
 			}
 		}
 	</style>
-	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
+	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost" role="main">
 		<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="<?php the_permalink() ?>"/>
 		<header class="gallery-cover">
 			<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
