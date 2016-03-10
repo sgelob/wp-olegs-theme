@@ -394,7 +394,7 @@ function start_lvl(&$output, $depth = 0, $args = array()) {
 
 function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
   $output.= '<li>';
-  $attributes = ' itemprop="url" target="_blank" href="' .esc_attr($item->url). '" title="' .esc_attr($item->attr_title). '"';
+  $attributes = ' itemprop="url" target="_blank" class="u-url" href="' .esc_attr($item->url). '" title="' .esc_attr($item->attr_title). '"';
   $item_output = $args->before;
   $current_url = (is_ssl()?'https://':'http://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
   $item_url = esc_attr( $item->url );
