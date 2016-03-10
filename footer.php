@@ -1,4 +1,4 @@
-<footer class="footer-foo">
+<footer class="footer-foo" role="contentinfo">
 	<ul class="footer-copyright">
 		<li><?php echo olegs_copyright(); ?> <?php echo get_option('footercontent1'); ?></li>
 		<li><?php echo get_option('footercontent2'); ?></li>
