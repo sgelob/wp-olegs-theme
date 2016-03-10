@@ -38,7 +38,7 @@
 	</style>
 	
 <div itemscope itemtype="https://schema.org/Person">
-	<section class="gallery-cover">
+	<section class="gallery-cover h-card">
 		<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 				<meta itemprop="url" content="<?php echo $thumb_url_full; ?>">
 				<meta itemprop="width" content="1620">
@@ -60,9 +60,9 @@
 			</div>
 			<div>
 				<h1>
-					<span itemprop="name"><strong><?php the_title(); ?></strong></span>
+					<span itemprop="name" class="p-name"><strong><?php the_title(); ?></strong></span>
 					<br>
-					<span itemprop="jobTitle"><?php the_excerpt_rss(); ?></span>
+					<span itemprop="jobTitle" class="p-role"><?php the_excerpt_rss(); ?></span>
 				</h1>
 			</div>
 		</header>
