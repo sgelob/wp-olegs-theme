@@ -6,7 +6,7 @@
 get_header(); ?>	
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	
-	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
+	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost" role="main">
 		<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="<?php the_permalink() ?>"/>
 	<div class="about-content">
 		<header>
