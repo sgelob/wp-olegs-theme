@@ -21,12 +21,12 @@
 </head> 
 
 <body <?php body_class(); ?>>
-	<header <?php $headercolor = get_post_meta($post->ID, 'dark_header', true); if( ! empty( $headercolor ) ) { echo 'class="dark-header"'; } ?>>
+	<header <?php $headercolor = get_post_meta($post->ID, 'dark_header', true); if( ! empty( $headercolor ) ) { echo 'class="dark-header"'; } ?> role="banner">
 		<div class="header-inner">
 			<div>
 				<a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 			</div>
-			<nav>
+			<nav role="navigation">
 				<header>
 					<h1 class="offscreen"><?php _e('Navigation menu', 'olegs'); ?></h1>
       			</header>
