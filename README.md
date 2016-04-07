@@ -8,7 +8,7 @@ Olegs Belousovs ( [@sgelob](https://twitter.com/sgelob) / [olegs.be](http://oleg
 
 ## Summary
 
-WordPress Olegs Theme for use as a photo blog template. Uses SCSS and Normalize.css, and Grunt for all processing tasks. Tested up to WordPress 4.2.1.
+WordPress Olegs Theme for use as a photo blog template. Uses SCSS and Normalize.css, and Grunt for all processing tasks. Tested up to WordPress 4.4.2.
 
 ## Usage
 
