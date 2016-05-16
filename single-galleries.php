@@ -40,7 +40,7 @@ get_header(); ?>
 			</span>
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
-			<p><?php _e('by', 'olegs'); ?> <a itemprop="author" itemprop="publisher" itemscope itemtype="https://schema.org/Person" rel="author" href="/about/"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></a> · 
+			<p><?php _e('by', 'olegs'); ?> <a itemprop="author" itemprop="publisher" itemscope itemtype="https://schema.org/Person" rel="author" href="/about/"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></a> • 
 				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('F j, Y'); ?></time>
 				<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>"/>
 				<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization"/>
@@ -51,7 +51,7 @@ get_header(); ?>
     				</span>
 					<meta itemprop="name" content="<?php $author = get_the_author(); echo $author; ?>">
 				</span>
-				<span><?php _e('Gallery in', 'olegs'); ?> <?php the_terms( $post->ID, 'genre', '', '', '' ); ?> – <span itemprop="contentLocation"><?php the_terms( $post->ID, 'country', '', '', '' ); ?></span></span>
+				<span>• <?php _e('Gallery in', 'olegs'); ?> <?php the_terms( $post->ID, 'genre', '', '', '' ); ?> – <span itemprop="contentLocation"><?php the_terms( $post->ID, 'country', '', '', '' ); ?></span></span>
 			</p>
 			</div>
 		</header>
