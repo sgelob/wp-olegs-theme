@@ -256,6 +256,35 @@ function ideal_register_my_post_types() {
         'supports' => array( 'title', 'editor' )
 		)
 	);
+	
+	register_post_type( 'services',
+		array(
+			'labels' => array(
+        'name' => 'Services',
+        'singular_name' => 'Service',
+        'add_new' => 'Add New Service',
+        'add_new_item' => 'Add New Service',
+        'edit_item' => 'Edit Service',
+        'new_item' => 'New Service',
+        'all_items' => 'All Services',
+        'view_item' => 'View Service',
+        'search_items' => 'Search Services',
+        'not_found' =>  'No services found',
+        'not_found_in_trash' => 'No services found in Trash', 
+        'parent_item_colon' => '',
+        'menu_name' => 'Services'
+    ),
+		'public' => true,
+        'show_ui' => true,
+        'publicly_queryable' => false,
+        'exclude_from_search' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-list-view',
+        // 'taxonomies' => array( 'category' ),
+        'rewrite' => array( 'slug' => 'service' ),
+        'supports' => array( 'title', 'page-attributes', 'editor', 'custom-fields' )
+		)
+	);
 }
 
 // 9. CUSTOM TAXONOMIES //
