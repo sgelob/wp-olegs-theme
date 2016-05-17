@@ -63,7 +63,8 @@ a {
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 
-	.page-template-page-about & {
+	.page-template-page-about &,
+	.page-template-page-what-i-do & {
 		text-align: center;
 		background: transparent;
 	}
@@ -79,6 +80,10 @@ a {
 	&:after {
 		clear: both;
 	}
+}
+
+.align-center {
+	text-align: center;
 }
 
 .offscreen {
@@ -171,7 +176,8 @@ code {
 			}
 
 			.single-galleries &,
-			.page-template-page-about & {
+			.page-template-page-about &,
+			.page-template-page-what-i-do & {
 				color: $white;
 			}
 		}
@@ -454,7 +460,8 @@ nav {
 			display: block;
 
 			.single-galleries &,
-			.page-template & {
+			.page-template &,
+			.page-template-default & {
 				display: inline;
 			}
 		}
@@ -464,20 +471,22 @@ nav {
 /* About */
 
 %button {
-	display: inline-block;
-	padding: 0.6em .6em;
 	border: 0;
 	border-bottom-width: 0;
 	border-radius: 0.2em;
 	cursor: pointer;
+	display: inline-block;
+	padding: 0.6em .6em;
 	outline: 0;
+	text-decoration: none!important;
 
 	@include responsive(small-screens) {
 		padding: 0.8em 1.2em;
 	}
 }
 
-.page-template-page-about {
+.page-template-page-about,
+.page-template-page-what-i-do {
 	.gallery-cover {
 		h2 {
 			color: $white;
@@ -796,6 +805,62 @@ blockquote {
 
 	footer {
 		text-align: right;
+	}
+}
+
+/* What I Do */
+
+.what-i-do {
+	clear: both;
+	list-style: none;
+	overflow: hidden;
+	padding: 0;
+	
+	&:before {
+		content: " ";
+	    display: block;
+	    height: 0.063em;
+	    background: #999;
+	    width: 15%;
+	    margin: 1em auto;
+	}
+	
+	@include responsive(small-screens) {
+		&__item {
+			border: none;
+			box-sizing: border-box;
+			float: left;
+			padding: 1em;
+			width: 50%;
+			
+			&:nth-of-type(2n+1) {
+				clear: left;
+			}
+			
+			p {
+				&:last-child {
+					margin-bottom: 0;
+    			}
+			}
+		}
+	}
+	
+	&__link {
+		color: $dark!important;
+	    display: block;
+	    margin: -1em;
+	    padding: 1em;
+	    cursor: pointer;
+	    overflow: hidden;
+	    text-decoration: none!important;
+	    
+	    @include transition(background, 0.1s, ease-out);
+	    
+	    h3 {
+			margin: 0;
+			padding: 0;
+			text-align: left;
+    	}
 	}
 }
 
