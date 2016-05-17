@@ -890,7 +890,7 @@ blockquote {
 		font-weight: 400;
 		line-height: normal;
 		text-align: center;
-		text-transform: uppercase;
+		text-transform: none;
 		margin: 0.8em auto;
 
 		@include responsive(small-screens) {
