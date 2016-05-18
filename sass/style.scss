@@ -122,10 +122,24 @@ code {
 	text-align: center;
 }
 
-.btn {
+.btn,
+.pushbutton-wide {
+	border: 1px solid!important;
+	
 	@extend %button;
 	
-	border: 1px solid!important;
+	@include transition(all, .5s, ease);
+}
+
+.pushbutton-wide {
+	background-color: $link-color;
+	color: $white;
+	
+	@include opacity(1);
+	
+	&:hover {
+		@include opacity(.7);
+	}
 }
 
 /* Header */
@@ -588,7 +602,8 @@ nav {
 	.fb-post,
 	#disqus_thread,
 	#mc_embed_signup,
-	twitterwidget {
+	twitterwidget,
+	[id*="contact-form"] {
 		@extend %contentcolumn;
 	}
 
