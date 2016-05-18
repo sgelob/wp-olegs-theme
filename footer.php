@@ -19,7 +19,7 @@
         // Google Fonts
 		WebFontConfig = {
         	google: {
-            	families: ['Lato:400,300,700:latin']
+            	families: ['Lato:400,400italic,300,700:latin']
         	}
     	};
     (function() {
