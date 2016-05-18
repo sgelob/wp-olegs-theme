@@ -18,10 +18,8 @@
 	?>
 	
 	<style>
-		@media all and (max-width: 767px) {
-			.gallery-cover {
-				background-image: url( <?php echo $thumb_url_medium; ?> );
-			}
+		.gallery-cover {
+			background-image: url( <?php echo $thumb_url_medium; ?> );
 		}
 		
 		@media all and (min-width: 768px) {
