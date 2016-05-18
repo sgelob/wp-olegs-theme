@@ -120,7 +120,7 @@
 	background-image: linear-gradient($from, $to);
 }
 
-// opacity
+// opacity @include opacity($property);
 
 @mixin opacity($property) {
 	opacity: $property;
