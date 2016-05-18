@@ -131,17 +131,6 @@ code {
 	@include transition(all, .5s, ease);
 }
 
-.pushbutton-wide {
-	background-color: $link-color;
-	color: $white;
-	
-	@include opacity(1);
-	
-	&:hover {
-		@include opacity(.7);
-	}
-}
-
 /* Header */
 
 .header-inner {
@@ -959,6 +948,54 @@ blockquote {
 
 #mc_embed_signup {
 	background-color: rgba(255, 255, 0, 0.15);
+}
+
+/* Landing Pages */
+
+[id*="contact-form"] {
+	select,
+	input[type='text'],
+	input[type='email'],
+	textarea {
+		border: 1px solid $light-grey;
+		max-width: 20em;
+		padding: 0.125em 0.375em;
+		width: 96%!important;
+		
+		@include responsive(small-screens) {
+			max-width: 48em;
+		}
+		
+		@include responsive(medium-screens) {
+			max-width: 62em;
+		}
+	}
+	
+	input[type='text'],
+	input[type='email'],
+	textarea {
+		font-size: 1.2em;
+		
+		@include rounded(0);
+		
+		@include shadow-inset(1px, 2px, 0, rgba(0,0,0,.07));
+	}
+}
+
+.pushbutton-wide {
+	background-color: $link-color;
+	color: $white;
+	font-size: .8em;
+	
+	@include opacity(1);
+	
+	&:hover {
+		@include opacity(.7);
+	}
+	
+	@include responsive(small-screens) {
+		font-size: 1em;
+	}
 }
 
 /* Footer */
