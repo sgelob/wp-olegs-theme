@@ -1,32 +1,16 @@
-<?php 
-	
+<?php
 	/*
 	@package Olegs
 	*/
-	get_header(); ?>
-	
-	<?php while ( have_posts() ) : the_post(); ?>
+get_header(); ?>
 
-<div>
-	<section class="gallery-cover">
-		<header>
+	<article role="main">
+		<header class="gallery-cover">
 			<div>
-				<h1>
-					<span><strong><?php _e('Content not found', 'olegs'); ?></strong></span>
-					<br>
-					<span><?php _e('Sorry but I couldn\'t find the page you are looking for. Please check to make sure you\'ve typed the URL correctly.', 'olegs'); ?></span>
-				</h1>
+				<h1 itemprop="headline"><?php _e('Content not found', 'olegs'); ?></h1>
+				<p><?php _e('Sorry, but I couldn’t find the content you are looking for. Please, check to make sure you’ve typed the URL correctly.', 'olegs'); ?></p>
 			</div>
 		</header>
-	</section>
-	
-	<div class="about-content">
-		<article>
-			<?php the_content(); ?>
-		</article>
-	</div>
-</div>
-
-<?php endwhile; // end of the loop. ?>
+	</article>
           
 <?php get_footer(); ?>
