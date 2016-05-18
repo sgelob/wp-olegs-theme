@@ -1,9 +1,9 @@
 <!DOCTYPE HTML> 
 <html <?php
-	if ( is_page_template( 'page-blog.php' ) || is_singular( 'post' ) || is_page( 915 ) || is_category() ) {
-		echo 'lang="it-IT"';
-	} else {
+	if ( is_page_template( 'page-photos.php' ) || is_singular( 'galleries' ) || is_page( 9, 11, 634, 743 ) ) {
 		echo 'lang="en-US"';
+	} else {
+		echo 'lang="it-IT"';
 } ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
