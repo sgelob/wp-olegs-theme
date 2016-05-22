@@ -5,8 +5,8 @@
 get_header(); ?>
 	<style>
 		.gallery-cover {
-				background-image: url( https://olegs.be/wp-content/uploads/2016/02/bugs-macro-photography-61-768x512.jpg );
-			}
+			background-image: url( https://olegs.be/wp-content/uploads/2016/02/bugs-macro-photography-61-768x512.jpg );
+		}
 		
 		@media all and (min-width: 768px) {
 			.gallery-cover {
@@ -28,5 +28,5 @@ get_header(); ?>
 			</div>
 		</header>
 	</article>
-          
+
 <?php get_footer(); ?>
