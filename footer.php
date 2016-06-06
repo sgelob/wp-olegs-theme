@@ -49,7 +49,7 @@
 	// FitVids.js
 	$(document).ready(function(){
     	$("article").fitVids();
-    }
+  	});
     <?php } ?>
 
     // Google Analytics
