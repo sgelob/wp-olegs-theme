@@ -47,7 +47,9 @@
 	
 	<?php if ( is_single() ) { ?>
 	// FitVids.js
-    $("article").fitVids();
+	$(document).ready(function(){
+    	$("article").fitVids();
+    }
     <?php } ?>
 
     // Google Analytics
