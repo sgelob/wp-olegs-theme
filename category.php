@@ -11,7 +11,7 @@ get_header(); ?>
 	<div class="about-content">
 		<header>
 			<h1 itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<p><a rel="author" href="/about/"><?php $author = get_the_author(); echo $author; ?></a>
+			<p><?php $author = get_the_author(); echo $author; ?>
 				<span class="sep">·</span>
 				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('d/m/Y'); ?></time>
 				<span class="sep">·</span>
