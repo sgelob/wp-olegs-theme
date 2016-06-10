@@ -4,15 +4,17 @@
 function my_jquery_enqueue()
 {
     wp_deregister_script('jquery');
-    wp_register_script('jquery', 'https://code.jquery.com/jquery-1.6.4.min.js', false, null, true);
-    wp_enqueue_script('jquery');
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.0.0.min.js', false, null, true);
+    
+    if (is_singular('galleries') || is_single()) {
+    	wp_enqueue_script('jquery');
+    }
 }
 
 add_action('wp_enqueue_scripts', 'my_jquery_enqueue');
 
 // General Scripts
-function olegs_register_files()
-{
+function olegs_register_files() {
     wp_register_script(
         'custom-scripts',
         get_stylesheet_directory_uri().'/build/js/scripts.js',
