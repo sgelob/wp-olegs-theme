@@ -94,7 +94,7 @@
 			
 			</ul><!-- what-i-do -->
 			
-			<p class="align-center"><a class="btn" href="mailto:olegs.belousovs@gmail.com"><?php _e('Mettiamoci in contatto', 'olegs'); ?></a></p>
+			<p class="align-center"><a class="btn" href="mailto:olegs.belousovs@gmail.com" role="button"><?php _e('Mettiamoci in contatto', 'olegs'); ?></a></p>
 		</article>
 	</div>
 </div>
