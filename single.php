@@ -11,7 +11,7 @@ get_header(); ?>
 	<div class="about-content">
 		<header>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
-			<p><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span>
+			<p><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></span>
 				<span class="sep">·</span>
 				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('d/m/Y'); ?></time>
 				<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>"/>
