@@ -27,7 +27,7 @@ get_header(); ?>
 				<span><?php _e('Articolo in', 'olegs'); ?> <?php the_category(', ') ?></span>
 			</p>
 		</header>
-		<p class="excerpt"><?php echo get_the_excerpt(); ?></p>
+		<p class="excerpt" itemprop="description"><?php echo get_the_excerpt(); ?></p>
 		<div class="clearfix"></div>
 	</div>
 	</article>
