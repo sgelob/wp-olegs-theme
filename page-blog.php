@@ -13,10 +13,19 @@ get_header(); ?>
 	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 	<div class="about-content">
 		<header>
-			<h1 itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<p><?php $author = get_the_author(); echo $author; ?>
+			<h1 itemprop="headline"><a href="<?php the_permalink() ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a></h1>
+			<p><span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name"><?php $author = get_the_author(); echo $author; ?></span></span>
 				<span class="sep">·</span>
 				<time itemprop="datePublished" datetime="<?php the_date('c'); ?>"><?php the_time('d/m/Y'); ?></time>
+				<meta itemprop="dateModified" content="<?php the_modified_date('c'); ?>"/>
+				<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization"/>
+					<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+						<meta itemprop="url" content="<?php echo get_stylesheet_directory_uri(); ?>/img/olegs-belousovs-portrait.jpg">
+						<meta itemprop="width" content="1200">
+						<meta itemprop="height" content="1200">
+    				</span>
+					<meta itemprop="name" content="<?php $author = get_the_author(); echo $author; ?>">
+				</span>
 				<span class="sep">·</span>
 				<span><?php _e('Articolo in', 'olegs'); ?> <?php the_category(', ') ?></span>
 			</p>
