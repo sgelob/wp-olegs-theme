@@ -84,7 +84,7 @@
 			<li class="what-i-do__item">
 			<a href="<?php $whatidourl = get_post_meta($post->ID, 'what-i-do_link', true); echo $whatidourl; ?>" class="what-i-do__link">
 				<h3><?php the_title(); ?></h3>
-				<p><?php the_content(); ?></p>
+				<?php the_content(); ?>
 			</a>
 			</li>
 			
