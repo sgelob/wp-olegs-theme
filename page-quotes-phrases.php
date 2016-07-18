@@ -67,13 +67,13 @@ get_header(); ?>
 			);
 			$the_query = new WP_Query($args);
 			if( $the_query->have_posts() ): while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-			<blockquote>
+			<blockquote itemprop="mentions" itemscope itemtype="http://schema.org/Article">
 				<?php the_content(); ?>
 				<footer><?php 
 					$quote_sources = wp_get_object_terms( $post->ID,  'quote-author' );
 						if ( ! empty( $quote_sources ) ) {
 							if ( ! is_wp_error( $quote_sources ) ) {
-								echo '— <cite>';
+								echo '— <cite itemprop="author">';
 									foreach( $quote_sources as $term ) {
 										echo esc_html( $term->name );
 									}
