@@ -27,6 +27,10 @@ body {
 	&.page-template-page-blog {
 		background-color: $link-color;
 	}
+	
+	&.page-template-page-landing {
+		background-color: $dark;
+	}
 }
 
 h1,
@@ -326,7 +330,7 @@ nav {
 		margin-bottom: 0;
 		background: $dark;
 		background: rgba(0, 0, 0, 0.5);
-		color: $white;
+		color: $white!important;
 		padding: 0.625em!important; /* 10/16 */
 		text-align: center;
 		text-transform: none!important;
@@ -357,7 +361,8 @@ nav {
 
 /* Single Gallery */
 
-.dark-header {
+.dark-header,
+.error404 header[role=banner] {
 	a {
 		color: $dark!important;
 	}
@@ -573,14 +578,15 @@ nav {
 
 	h2,
 	h3 {
-		font-weight: 400;
+		color: $black;
+		font-weight: 700;
 		text-align: center;
-		text-transform: uppercase;
 		padding: .6em 0 .2em 0;
 	}
 
 	h1,
 	h2,
+	h3,
 	p,
 	ul,
 	ol,
@@ -592,6 +598,7 @@ nav {
 	#disqus_thread,
 	#mc_embed_signup,
 	twitterwidget,
+	#_giphy_tv,
 	[id*="contact-form"] {
 		@extend %contentcolumn;
 	}
@@ -770,7 +777,7 @@ nav {
 		}
 
 		&:hover {
-			opacity: 0.8;
+			@include opacity(.8);
 		}
 
 		&.share-facebook {
@@ -803,7 +810,7 @@ blockquote {
 	}
 
 	p {
-		font-size: 1.4em;
+		font-size: 1.2em;
 		display: inline;
 	}
 
@@ -861,6 +868,7 @@ blockquote {
 	    @include transition(background, 0.1s, ease-out);
 	    
 	    h3 {
+		    font-weight: 700;
 			margin: 0;
 			padding: 0;
 			text-align: left;
@@ -872,7 +880,8 @@ blockquote {
 
 .category,
 .single-post,
-.page-template-page-blog {
+.page-template-page-blog,
+.page-template-page-landing {
 	.about-content {
 		padding-top: 1em;
 		padding-bottom: 1em;
@@ -958,6 +967,7 @@ blockquote {
 	input[type='email'],
 	textarea {
 		border: 1px solid $light-grey;
+		margin-bottom: .5em;
 		max-width: 20em;
 		padding: 0.125em 0.375em;
 		width: 96%!important;
@@ -980,21 +990,50 @@ blockquote {
 		
 		@include shadow-inset(1px, 2px, 0, rgba(0,0,0,.07));
 	}
+	
+	textarea {
+		height: 14em;
+		margin: 0!important;
+	}
+	
+	h3 {
+		color: green;
+		
+		a {
+			color: $link-color;
+		}
+	}
+	
+	.contact-form-submission {
+		&:before {
+			content: " ";
+		}
+	}
+	
+	.pushbutton-wide {
+		margin: 0;
+	}
 }
 
 .pushbutton-wide {
 	background-color: $link-color;
-	color: $white;
+	color: $white!important;
 	font-size: .8em;
+	
+	margin: 1.5em 0 0.7em 0;
 	
 	@include opacity(1);
 	
-	&:hover {
-		@include opacity(.7);
-	}
-	
 	@include responsive(small-screens) {
 		font-size: 1em;
+		
+		margin: 3em 0 1.5em 0;
+	}
+	
+	&:hover {
+		background-color: $link-color!important;
+		
+		@include opacity(.7);
 	}
 }
 
