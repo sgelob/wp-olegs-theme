@@ -18,9 +18,11 @@
 	window.onload = function() {    
         // Google Fonts
 		WebFontConfig = {
-        	google: {
-            	families: ['Lato:400,400italic,300,700:latin']
-        	}
+        	google: {families: ['Lato:400,400italic,300,700:latin']},
+        	timeout: 10000,
+        	active: function() {
+	        	performance.mark('fonts:active');
+	        }
     	};
     (function() {
         var wf = document.createElement('script');
