@@ -29,6 +29,18 @@ function olegs_register_files() {
 
 add_action('wp_enqueue_scripts', 'olegs_register_files');
 
+// Add Async Attributes to WordPress Scripts
+function add_async_attribute($tag, $handle) {
+   $scripts_to_async = array('jquery', 'custom-scripts');
+   foreach($scripts_to_async as $async_script) {
+      if ($async_script !== $handle) return $tag;
+      return str_replace(' src', ' async="async" src', $tag);
+   }
+   return $tag;
+}
+
+add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+
 // Remove WordPress version meta tag
 
 remove_action('wp_head', 'wp_generator');
