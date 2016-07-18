@@ -12,10 +12,6 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-32x32.png" sizes="32x32" />
 	<title><?php wp_title(''); ?></title>
-	<!-- Enable media queries for old IE -->
-	<!--[if lt IE 9]>
-		<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-	<![endif]-->
 	<link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
 <?php wp_head(); ?>
 </head> 
