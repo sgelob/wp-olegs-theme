@@ -29,6 +29,7 @@ function olegs_register_files() {
 
 add_action('wp_enqueue_scripts', 'olegs_register_files');
 
+/*
 // Add Async Attributes to WordPress Scripts
 function add_async_attribute($tag, $handle) {
    $scripts_to_async = array('jquery', 'custom-scripts');
@@ -40,6 +41,7 @@ function add_async_attribute($tag, $handle) {
 }
 
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+*/
 
 // Remove WordPress version meta tag
 
@@ -553,6 +555,8 @@ function jeherve_remove_all_jp_css() {
   wp_deregister_style( 'gravatar-profile-widget' ); // Gravatar Widget
   wp_deregister_style( 'widget-grid-and-list' ); // Top Posts widget
   wp_deregister_style( 'jetpack-widgets' ); // Widgets
+  
+  wp_deregister_style( 'lazysizes' );
 }
 add_action('wp_print_styles', 'jeherve_remove_all_jp_css' );
 
