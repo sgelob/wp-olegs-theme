@@ -12,7 +12,36 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-32x32.png" sizes="32x32" />
 	<title><?php wp_title(''); ?></title>
+	
+
+<script>
+	// load CSS async
+	function loadCSS(e,t,n){"use strict";function o(){var t;for(var i=0;i<s.length;i++){if(s[i].href&&s[i].href.indexOf(e)>-1){t=true}}if(t){r.media=n||"all"}else{setTimeout(o)}}var r=window.document.createElement("link");var i=t||window.document.getElementsByTagName("script")[0];var s=window.document.styleSheets;r.rel="stylesheet";r.href=e;r.media="only x";i.parentNode.insertBefore(r,i);o();return r}
+
+	loadCSS( "<?php bloginfo('template_directory'); ?>/style.css" );
+</script>
+
+<!-- no js support -->
+<noscript>
 	<link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
+</noscript>
+
+<!-- Critical CSS includes -->
+<style>
+<?php
+	if(is_front_page()){
+		include (TEMPLATEPATH . '/critical-home.css' );
+	}else if ( is_singular('galleries') ){
+		include (TEMPLATEPATH . '/critical-gallery.css' );
+	}else if ( is_page_template( 'page-blog.php' ) || is_single() ){
+		include (TEMPLATEPATH . '/critical-blog.css' );
+	}else if ( is_page_template( 'page-photos.php' ) ){
+		include (TEMPLATEPATH . '/critical-photos.css' );
+	}
+?>
+</style>
+	
+
 <?php wp_head(); ?>
 </head> 
 
