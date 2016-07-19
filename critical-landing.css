@@ -1,0 +1,92 @@
+html{ font-family: sans-serif; }
+body{ margin: 0px; }
+article, header, nav{ display: block; }
+a{ background-color: transparent; }
+h1{ font-size: 2em; margin: 0.67em 0px; }
+img{ border: 0px; }
+body{ background-color: rgb(36, 35, 34); color: rgb(85, 85, 85); font-family: Arial, Helvetica, Tahoma, sans-serif; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; background-position: initial initial; background-repeat: initial initial; }
+@media only screen and (min-width: 768px){
+body{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
+}
+body.page-template-page-landing{ background-color: rgb(36, 35, 34); }
+h1{ font-family: Arial, Helvetica, Tahoma, sans-serif; }
+@media only screen and (min-width: 768px){
+h1{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
+}
+a{ text-decoration: none; color: inherit; transition: all 1s ease; -webkit-transition: all 1s ease; }
+.offscreen{ position: absolute; clip: rect(1px 1px 1px 1px); padding: 0px; border: 0px; height: 0.063em; width: 0.063em; overflow: hidden; }
+.about-content h1, .about-content p{ max-width: 50rem; margin: 1.2em auto; }
+.header-inner{ display: table; width: 100%; position: relative; margin-right: auto; margin-left: auto; padding-right: 0px; padding-left: 0px; z-index: 9999 !important; }
+@media only screen and (min-width: 768px){
+.header-inner{ width: 55%; padding-right: 1.563em; padding-left: 1.563em; }
+}
+.header-inner > div{ float: none; padding-left: 0px; text-align: center; }
+@media only screen and (min-width: 768px){
+.header-inner > div{ display: table-cell; padding-top: 0.7em; text-align: left; }
+}
+@media only screen and (min-width: 992px){
+.header-inner > div{ padding-top: 2em; }
+}
+.header-inner > div a{ color: rgb(247, 247, 247); display: inline-block; vertical-align: middle; font-size: 2em; font-weight: 700; margin: 0px; letter-spacing: -0.063em; text-transform: lowercase; }
+@media only screen and (min-width: 768px){
+.header-inner > div a{ font-size: 4em; }
+}
+nav{ font-size: 1em; font-weight: 400; text-transform: uppercase; display: block; float: none; vertical-align: middle; }
+@media only screen and (min-width: 768px){
+nav{ display: table-cell; }
+}
+@media only screen and (min-width: 992px){
+nav{ font-size: 1.4em; }
+}
+nav ul{ margin: 0px; padding-left: 0px; list-style: none; text-align: center; }
+@media only screen and (min-width: 768px){
+nav ul{ text-align: right; }
+}
+nav ul li{ display: inline-block; line-height: 1; }
+@media only screen and (min-width: 768px){
+nav ul li:last-child a{ padding-right: 0px; }
+}
+nav ul li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
+@media only screen and (min-width: 768px){
+nav ul li a{ padding: 3em 1em; }
+}
+.about-content{ padding: 0px 5%; font-size: 1.1em; line-height: 1.45em; }
+@media only screen and (min-width: 768px){
+.about-content{ padding: 0px 10%; font-size: 1.2em; line-height: 1.45em; }
+}
+@media only screen and (min-width: 992px){
+.about-content{ padding: 0px 15%; font-size: 1.3em; line-height: 1.55em; }
+}
+@media only screen and (min-width: 1200px){
+.about-content{ padding: 0px 20%; font-size: 1.4em; line-height: 1.65em; }
+}
+.about-content{ background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial; }
+.about-content .img-wrap{ display: block; margin: 0px -1em; max-width: 60rem !important; }
+@media only screen and (min-width: 768px){
+.about-content .img-wrap{ margin: 2.4em auto 1.2em; }
+}
+.about-content .img-wrap .alignnone{ display: block; padding-bottom: 0.4em; }
+@media only screen and (min-width: 768px){
+.about-content .img-wrap .alignnone{ padding-bottom: 0px; }
+}
+.about-content .excerpt{ color: rgb(36, 35, 34); }
+.about-content .excerpt::after{ content: ' '; display: block; height: 0.063em; background-color: rgb(153, 153, 153); width: 15%; margin: 1em auto 0px; background-position: initial initial; background-repeat: initial initial; }
+@media only screen and (min-width: 768px){
+.about-content .excerpt::after{ margin: 2em auto 0px; }
+}
+@media only screen and (min-width: 768px){
+.about-content .excerpt{ font-size: 1.1em; line-height: 1.55em; }
+}
+.about-content img{ width: 100%; height: auto; }
+.about-content{ padding: 1em; }
+@media only screen and (min-width: 768px){
+.about-content{ padding: 3em 1em; }
+}
+ .page-template-page-landing .about-content{ padding-top: 1em; padding-bottom: 1em; }
+ .page-template-page-landing h1{ font-size: 1.3em; font-weight: 400; line-height: normal; text-align: center; text-transform: none; margin: 0.8em auto; }
+@media only screen and (min-width: 768px){
+ .page-template-page-landing h1{ font-size: 1.6em; }
+}
+@media only screen and (min-width: 992px){
+ .page-template-page-landing h1{ font-size: 2em; }
+}
