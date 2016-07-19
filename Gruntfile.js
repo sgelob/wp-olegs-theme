@@ -40,6 +40,17 @@ module.exports = function(grunt) {
 					ignoreConsole: false
 				}
 			},
+			landing: {
+				options: {
+					url: "https://olegs.be/ottimizzazione-prestazioni-velocita-sito-web-lento/",
+					width: 1200,
+					height: 900,
+					outputfile: "critical-landing.css",
+					filename: "style.css", // Using path.resolve( path.join( ... ) ) is a good idea here
+					buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
 			blog: {
 				options: {
 					url: "https://olegs.be/blog/",
