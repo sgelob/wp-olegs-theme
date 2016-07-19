@@ -13,33 +13,32 @@
 	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-32x32.png" sizes="32x32" />
 	<title><?php wp_title(''); ?></title>
 	
-
-<script>
-	// load CSS async
-	function loadCSS(e,t,n){"use strict";function o(){var t;for(var i=0;i<s.length;i++){if(s[i].href&&s[i].href.indexOf(e)>-1){t=true}}if(t){r.media=n||"all"}else{setTimeout(o)}}var r=window.document.createElement("link");var i=t||window.document.getElementsByTagName("script")[0];var s=window.document.styleSheets;r.rel="stylesheet";r.href=e;r.media="only x";i.parentNode.insertBefore(r,i);o();return r}
-
-	loadCSS( "<?php bloginfo('template_directory'); ?>/style.css" );
-</script>
-
-<!-- no js support -->
-<noscript>
-	<link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
-</noscript>
-
-<!-- Critical CSS includes -->
-<style>
-<?php
-	if(is_front_page()){
-		include (TEMPLATEPATH . '/critical-home.css' );
-	}else if ( is_singular('galleries') ){
-		include (TEMPLATEPATH . '/critical-gallery.css' );
-	}else if ( is_page_template( 'page-blog.php' ) || is_single() ){
-		include (TEMPLATEPATH . '/critical-blog.css' );
-	}else if ( is_page_template( 'page-photos.php' ) ){
-		include (TEMPLATEPATH . '/critical-photos.css' );
-	}
-?>
-</style>
+	<script>
+		/*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+		!function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+	
+		loadCSS( "<?php bloginfo('template_directory'); ?>/style.css" );
+	</script>
+	
+	<!-- No JS support -->
+	<noscript>
+		<link href="<?php bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
+	</noscript>
+	
+	<!-- Critical CSS includes -->
+	<style>
+	<?php
+		if(is_front_page()){
+			include (TEMPLATEPATH . '/critical-home.css' );
+		}else if ( is_singular('galleries') ){
+			include (TEMPLATEPATH . '/critical-gallery.css' );
+		}else if ( is_page_template( 'page-blog.php' ) || is_single() ){
+			include (TEMPLATEPATH . '/critical-blog.css' );
+		}else if ( is_page_template( 'page-photos.php' ) ){
+			include (TEMPLATEPATH . '/critical-photos.css' );
+		}
+	?>
+	</style>
 	
 
 <?php wp_head(); ?>
