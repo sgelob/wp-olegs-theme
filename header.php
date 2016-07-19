@@ -28,18 +28,19 @@
 	<!-- Critical CSS includes -->
 	<style>
 	<?php
-		if ( is_front_page() || is_page_template( 'page-about.php' ) ){
-			include (TEMPLATEPATH . '/critical-home.css' );
-		} else if ( is_singular('galleries') ){
-			include (TEMPLATEPATH . '/critical-gallery.css' );
-		} else if ( is_page_template( 'page-blog.php' ) || is_single() ){
-			include (TEMPLATEPATH . '/critical-blog.css' );
-		} else if ( is_page_template( 'page-photos.php' ) ){
-			include (TEMPLATEPATH . '/critical-photos.css' );
+		if ( is_front_page() ) {
+			include (TEMPLATEPATH . '/critical-home.css');
+		} else if ( is_page_template( 'page-about.php' ) ) {
+			include (TEMPLATEPATH . '/critical-about.css');
+		} else if ( is_singular('galleries') ) {
+			include (TEMPLATEPATH . '/critical-gallery.css');
+		} else if ( is_page_template( 'page-blog.php' ) || is_single() ) {
+			include (TEMPLATEPATH . '/critical-blog.css');
+		} else if ( is_page_template( 'page-photos.php' ) ) {
+			include (TEMPLATEPATH . '/critical-photos.css');
 		}
 	?>
 	</style>
-	
 
 <?php wp_head(); ?>
 </head> 
