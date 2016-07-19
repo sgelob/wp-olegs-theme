@@ -29,6 +29,17 @@ module.exports = function(grunt) {
 					ignoreConsole: false
 				}
 			},
+			about: {
+				options: {
+					url: "https://olegs.be/web-designer-sviluppatore-wordpress/",
+					width: 1200,
+					height: 900,
+					outputfile: "critical-about.css",
+					filename: "style.css", // Using path.resolve( path.join( ... ) ) is a good idea here
+					buffer: 800*1024,
+					ignoreConsole: false
+				}
+			},
 			blog: {
 				options: {
 					url: "https://olegs.be/blog/",
