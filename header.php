@@ -28,13 +28,13 @@
 	<!-- Critical CSS includes -->
 	<style>
 	<?php
-		if(is_front_page()){
+		if ( is_front_page() || is_page_template( 'page-about.php' ) ){
 			include (TEMPLATEPATH . '/critical-home.css' );
-		}else if ( is_singular('galleries') ){
+		} else if ( is_singular('galleries') ){
 			include (TEMPLATEPATH . '/critical-gallery.css' );
-		}else if ( is_page_template( 'page-blog.php' ) || is_single() ){
+		} else if ( is_page_template( 'page-blog.php' ) || is_single() ){
 			include (TEMPLATEPATH . '/critical-blog.css' );
-		}else if ( is_page_template( 'page-photos.php' ) ){
+		} else if ( is_page_template( 'page-photos.php' ) ){
 			include (TEMPLATEPATH . '/critical-photos.css' );
 		}
 	?>
