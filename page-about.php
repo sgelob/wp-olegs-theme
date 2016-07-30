@@ -19,18 +19,18 @@
 	
 	<style>
 		.gallery-cover {
-			background-image: url( <?php echo $thumb_url_medium; ?> );
+			background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.5) ), url( <?php echo $thumb_url_medium; ?> );
 		}
 		
 		@media all and (min-width: 768px) {
 			.gallery-cover {
-				background-image: url( <?php echo $thumb_url_large; ?> );
+				background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.5) ), url( <?php echo $thumb_url_large; ?> );
 			}
 		}
 		
 		@media all and (min-width: 992px) {
 			.gallery-cover {
-				background-image: url( <?php echo $thumb_url_full; ?> );
+				background-image: linear-gradient( rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.5) ), url( <?php echo $thumb_url_full; ?> );
 			}
 		}
 	</style>
