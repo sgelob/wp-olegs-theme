@@ -1,13 +1,13 @@
 @mixin title-style($color, $background: #eee) /* Multiple arguments + Defining defaults */ {
 	margin: 0 0 20px 0;
 	text-transform: uppercase;
-	
+
 	font: {
 		family: $font-serif;
 		size: 20px;
 		weight: bold;
 	}
-	
+
 	color: $color;
 	background: $background;
 }
@@ -15,32 +15,32 @@
 // background-size
 
 @mixin background-size($width, $height) {
-	-webkit-background-size: $width $height;
-	-moz-background-size: $width $height;
+	// -webkit-background-size: $width $height; // -webkit-background-size was required by Android Browser 2.3, Opera 10 and earlier
+	// -moz-background-size: $width $height; // -moz-background-size was required by Firefox 3.6 and earlier
 	background-size: $width $height;
 }
 
 // border-radius – @include rounded(2px);
 
 @mixin rounded($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
+	// -webkit-border-radius: $radius; // -webkit-border-radius was required by Android Browser 2.1, Chrome 4, iOS Safari 3.2, Safari 4 and earlier
+	// -moz-border-radius: $radius; // -moz-border-radius was required by Firefox 3.6 and earlier
 	border-radius: $radius;
 }
 
 // box-shadow – @include shadow(2px, 2px, 0, rgba(0,0,0,.25));
 
 @mixin shadow($x, $y, $blur, $color) {
-	-webkit-box-shadow: $x $y $blur $color;
-	-moz-box-shadow: $x $y $blur $color;
+	// -webkit-box-shadow: $x $y $blur $color; // -webkit-box-shadow was required by Android Browser 3, Chrome 9, iOS Safari 4.2, Safari 5 and earlier
+	// -moz-box-shadow: $x $y $blur $color; // -moz-box-shadow was required by Firefox 3.6 and earlier
 	box-shadow: $x $y $blur $color;
 }
 
 // box-shadow – @include shadow-inset(2px, 2px, 0, rgba(0,0,0,.25));
 
 @mixin shadow-inset($x, $y, $blur, $color) {
-	-webkit-box-shadow: inset $x $y $blur $color;
-	-moz-box-shadow: inset $x $y $blur $color;
+	// -webkit-box-shadow: inset $x $y $blur $color; // -webkit-box-shadow was required by Android Browser 3, Chrome 9, iOS Safari 4.2, Safari 5 and earlier
+	// -moz-box-shadow: inset $x $y $blur $color; // -moz-box-shadow was required by Firefox 3.6 and earlier
 	box-shadow: inset $x $y $blur $color;
 }
 
@@ -48,9 +48,9 @@
 
 @mixin transition($property, $duration, $method) {
 	-webkit-transition: $property $duration $method;
-	-moz-transition: $property $duration $method;
-	-o-transition: $property $duration $method;
-	-ms-transition: $property $duration $method;
+	// -moz-transition: $property $duration $method; // -moz-transition was required by Firefox 15 and earlier
+	// -o-transition: $property $duration $method; // -o-transition prefix is no longer supported
+	// -ms-transition: $property $duration $method; // -ms-transition prefix is no longer supported
 	transition: $property $duration $method;
 }
 
@@ -58,39 +58,39 @@
 @mixin transform-rotate($val){
     @if($val != null){
         -webkit-transform: rotate($val + deg) ;
-        -moz-transform   : rotate($val + deg) ;
-        -o-transform     : rotate($val + deg) ;
-        -ms-transform    : rotate($val + deg) ;
+        // -moz-transform   : rotate($val + deg) ; // -moz-transform was required by Firefox 15 and earlier
+        // -o-transform     : rotate($val + deg) ; // -o-transform prefix is no longer supported
+        // -ms-transform    : rotate($val + deg) ; // -ms-transform was required by IE 9 and earlier
         transform        : rotate($val + deg) ;
     }
 }
 @mixin transform-scale($x:1, $y:1){
     -webkit-transform: scale($x, $y);
-    -moz-transform   : scale($x, $y);
-    -o-transform     : scale($x, $y);
-    -ms-transform    : scale($x, $y);
+    // -moz-transform   : scale($x, $y); // -moz-transform was required by Firefox 15 and earlier
+    // -o-transform     : scale($x, $y); // -o-transform prefix is no longer supported
+    // -ms-transform    : scale($x, $y); // -ms-transform was required by IE 9 and earlier
     transform        : scale($x, $y);
 }
 @mixin transform-skew($x:0, $y:0){
     -webkit-transform: skew($x + deg, $y + deg) ;
-    -moz-transform   : skew($x + deg, $y + deg) ;
-    -o-transform     : skew($x + deg, $y + deg) ;
-    -ms-transform    : skew($x + deg, $y + deg) ;
+    // -moz-transform   : skew($x + deg, $y + deg) ; // -moz-transform was required by Firefox 15 and earlier
+    // -o-transform     : skew($x + deg, $y + deg) ; // -o-transform prefix is no longer supported
+    // -ms-transform    : skew($x + deg, $y + deg) ; // -ms-transform was required by IE 9 and earlier
     transform        : skew($x + deg, $y + deg) ;
 }
 @mixin transform-translate($x, $y){
     @if($x != null){
         -webkit-transform: translateX($x);
-        -moz-transform   : translateX($x);
-        -o-transform     : translateX($x);
-        -ms-transform    : translateX($x);
+        // -moz-transform   : translateX($x); // -moz-transform was required by Firefox 15 and earlier
+        // -o-transform     : translateX($x); // -o-transform prefix is no longer supported
+        // -ms-transform    : translateX($x); // -ms-transform was required by IE 9 and earlier
         transform        : translateX($x);
     }
     @if($y != null){
         -webkit-transform: translateY($y);
-        -moz-transform   : translateY($y);
-        -o-transform     : translateY($y);
-        -ms-transform    : translateY($y);
+        // -moz-transform   : translateY($y); // -moz-transform was required by Firefox 15 and earlier
+        // -o-transform     : translateY($y); // -o-transform prefix is no longer supported
+        // -ms-transform    : translateY($y); // -ms-transform was required by IE 9 and earlier
         transform        : translateY($y);
     }
 }
@@ -98,8 +98,8 @@
 // box-sizing
 
 @mixin box-sizing {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+	// -webkit-box-sizing: border-box; // -webkit-box-sizing was required by Android Browser 3, Chrome 9, iOS Safari 4.2, Safari 5 and earlier
+	// -moz-box-sizing: border-box; // -moz-box-sizing was required by Firefox 28 and earlier
 	box-sizing: border-box;
 }
 
@@ -147,26 +147,13 @@
 	}
 }
 
-// Retina
-
-@mixin retinize($file, $type, $width, $height, $repeat, $x, $y) {
-	background: transparent url('http://static.yesmoke.eu/images/' + $file + '.' + $type) $repeat $x $y;
-	
-	@media #{$is-hidpi} {
-		& {
-			background-image: url('http://static.yesmoke.eu/images/' + $file + '@2x.' + $type);
-			@include background-size($width, $height);
-		}
-	}
-}
-
 // Vertical align anything
 
 @mixin vertical-align {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
+  // -ms-transform: translateY(-50%); // -ms-transform was required by IE 9 and earlier
   transform: translateY(-50%);
 }
 
@@ -178,7 +165,7 @@
   -ms-word-break: break-all;
   word-break: break-word;
   -ms-hyphens: auto;
-  -moz-hyphens: auto;
+  // -moz-hyphens: auto; // -moz-hyphens was required by Firefox 42 and earlier
   -webkit-hyphens: auto;
   hyphens: auto;
 }
