@@ -27,7 +27,7 @@ body {
 	&.page-template-page-blog {
 		background-color: $link-color;
 	}
-	
+
 	&.page-template-page-landing {
 		background-color: $dark;
 	}
@@ -129,9 +129,9 @@ code {
 .btn,
 .pushbutton-wide {
 	border: 1px solid!important;
-	
+
 	@extend %button;
-	
+
 	@include transition(all, .5s, ease);
 }
 
@@ -198,7 +198,7 @@ nav {
 	display: block;
 	float: none;
 	vertical-align: middle;
-	
+
 	@include responsive(small-screens) {
 		display: table-cell;
 	}
@@ -212,41 +212,41 @@ nav {
 		padding-left: 0;
 		list-style: none;
 		text-align: center;
-		
+
 		@include responsive(small-screens) {
 			text-align: right;
 		}
+	}
 
-		li {
-			display: inline-block;
-			line-height: 1;
+	li {
+		display: inline-block;
+		line-height: 1;
+
+		@include responsive(small-screens) {
+			&:last-child {
+				a {
+					padding-right: 0;
+				}
+			}
+		}
+
+		a {
+			color: $white;
+			display: block;
+			padding: 1em 0.5em;
+
+			&:hover {
+				text-decoration: underline;
+			}
 
 			@include responsive(small-screens) {
-				&:last-child {
-					a {
-						padding-right: 0;
-					}
-				}
+				padding: 3em 1em;
 			}
+		}
 
+		&.current-menu-item {
 			a {
-				color: $white;
-				display: block;
-				padding: 1em 0.5em;
-
-				&:hover {
-					text-decoration: underline;
-				}
-
-				@include responsive(small-screens) {
-					padding: 3em 1em;
-				}
-			}
-
-			&.current-menu-item {
-				a {
-					text-decoration: underline;
-				}
+				text-decoration: underline;
 			}
 		}
 	}
@@ -376,9 +376,8 @@ nav {
 
 	background-repeat: no-repeat;
 	background-position: center center;
-	-webkit-background-size: cover;
 		-moz-background-size: cover;
-			-o-background-size: cover;
+			// -o-background-size: cover; // -o-background-size prefix is no longer supported
 				background-size: cover;
 
 	@include responsive(small-screens) {
@@ -827,7 +826,7 @@ blockquote {
 	list-style: none;
 	overflow: hidden;
 	padding: 0;
-	
+
 	&:before {
 		content: " ";
 	    display: block;
@@ -836,7 +835,7 @@ blockquote {
 	    width: 15%;
 	    margin: 1em auto;
 	}
-	
+
 	@include responsive(small-screens) {
 		&__item {
 			border: none;
@@ -844,11 +843,11 @@ blockquote {
 			float: left;
 			padding: 1em;
 			width: 50%;
-			
+
 			&:nth-of-type(2n+1) {
 				clear: left;
 			}
-			
+
 			p {
 				&:last-child {
 					margin-bottom: 0;
@@ -856,7 +855,7 @@ blockquote {
 			}
 		}
 	}
-	
+
 	&__link {
 		color: $dark!important;
 	    display: block;
@@ -865,9 +864,9 @@ blockquote {
 	    cursor: pointer;
 	    overflow: hidden;
 	    text-decoration: none!important;
-	    
+
 	    @include transition(background, 0.1s, ease-out);
-	    
+
 	    h3 {
 		    font-weight: 700;
 			margin: 0;
@@ -972,45 +971,45 @@ blockquote {
 		max-width: 20em;
 		padding: 0.125em 0.375em;
 		width: 96%!important;
-		
+
 		@include responsive(small-screens) {
 			max-width: 48em;
 		}
-		
+
 		@include responsive(medium-screens) {
 			max-width: 62em;
 		}
 	}
-	
+
 	input[type='text'],
 	input[type='email'],
 	textarea {
 		font-size: 1.2em;
-		
+
 		@include rounded(0);
-		
+
 		@include shadow-inset(1px, 2px, 0, rgba(0,0,0,.07));
 	}
-	
+
 	textarea {
 		height: 14em;
 		margin: 0!important;
 	}
-	
+
 	h3 {
 		color: green;
-		
+
 		a {
 			color: $link-color;
 		}
 	}
-	
+
 	.contact-form-submission {
 		&:before {
 			content: " ";
 		}
 	}
-	
+
 	.pushbutton-wide {
 		margin: 0;
 	}
@@ -1020,20 +1019,20 @@ blockquote {
 	background-color: $link-color;
 	color: $white!important;
 	font-size: .8em;
-	
+
 	margin: 1.5em 0 0.7em 0;
-	
+
 	@include opacity(1);
-	
+
 	@include responsive(small-screens) {
 		font-size: 1em;
-		
+
 		margin: 3em 0 1.5em 0;
 	}
-	
+
 	&:hover {
 		background-color: $link-color!important;
-		
+
 		@include opacity(.7);
 	}
 }
