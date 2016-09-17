@@ -53,7 +53,6 @@ nav ul li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
 nav ul li a{ padding: 3em 1em; }
 }
 nav ul li.current-menu-item a{ text-decoration: underline; }
-.dark-header a{ color: rgb(36, 35, 34) !important; }
 .gallery-cover{ box-sizing: border-box; height: 100vh; margin-top: -5.3125em; overflow: hidden; -webkit-background-size: cover; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat no-repeat; }
 @media only screen and (min-width: 768px){
 .gallery-cover{ margin-top: -7em; }
@@ -85,7 +84,7 @@ nav ul li.current-menu-item a{ text-decoration: underline; }
 .gallery-cover h1{ font-size: 2.5em; }
 }
 .gallery-cover h1 span{ font-size: 0.8em; }
- .about-get-in-touch li a{ border: 0px; border-top-left-radius: 0.2em; border-top-right-radius: 0.2em; border-bottom-right-radius: 0.2em; border-bottom-left-radius: 0.2em; cursor: pointer; display: inline-block; padding: 0.6em; outline: rgb(0, 0, 0); text-decoration: none !important; }
+ .about-get-in-touch li a{ border: 0px; border-top-left-radius: 0.2em; border-top-right-radius: 0.2em; border-bottom-right-radius: 0.2em; border-bottom-left-radius: 0.2em; cursor: pointer; display: inline-block; padding: 0.6em; outline: 0px; text-decoration: none !important; }
 @media only screen and (min-width: 768px){
  .about-get-in-touch li a{ padding: 0.8em 1.2em; }
 }
