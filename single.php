@@ -32,6 +32,7 @@ get_header(); ?>
 		<?php get_template_part('inc/subscribe'); ?>
 		<div class="clearfix"></div>
 		<p class="scroll-top"><a href="#top"><?php _e('⇡ Torna su', 'olegs'); ?></a></p>
+<!--
 		<div class="clearfix"></div>
 		<section class="share">
 			<header>
@@ -39,6 +40,7 @@ get_header(); ?>
 			</header>
 			<?php get_template_part('inc/share'); ?>
 		</section>
+-->
 		<div class="clearfix"></div>
 		<section class="comments">
 			<header>
