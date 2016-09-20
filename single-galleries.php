@@ -36,6 +36,7 @@ get_header(); ?>
 		<?php the_content(); ?>
 		<div class="clearfix"></div>
 		<p class="scroll-top"><a href="#top"><?php _e('⇡ Back to top', 'olegs'); ?></a></p>
+<!--
 		<div class="clearfix"></div>
 		<section class="share">
 			<header>
@@ -43,6 +44,7 @@ get_header(); ?>
 			</header>
 			<?php get_template_part( 'inc/share' ); ?>
 		</section>
+-->
 		<div class="clearfix"></div>
 		<section class="comments">
 			<header>
