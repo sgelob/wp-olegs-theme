@@ -44,15 +44,15 @@ nav ul{ margin: 0px; padding-left: 0px; list-style: none; text-align: center; }
 @media only screen and (min-width: 768px){
 nav ul{ text-align: right; }
 }
-nav ul li{ display: inline-block; line-height: 1; }
+nav li{ display: inline-block; line-height: 1; }
 @media only screen and (min-width: 768px){
-nav ul li:last-child a{ padding-right: 0px; }
+nav li:last-child a{ padding-right: 0px; }
 }
-nav ul li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
+nav li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
 @media only screen and (min-width: 768px){
-nav ul li a{ padding: 3em 1em; }
+nav li a{ padding: 3em 1em; }
 }
-nav ul li.current-menu-item a{ text-decoration: underline; }
+nav li.current-menu-item a{ text-decoration: underline; }
 .wrap{ overflow: hidden; margin: 0px; background-color: rgb(36, 35, 34); background-position: initial initial; background-repeat: initial initial; }
 .box{ background-color: rgb(51, 51, 51); float: left; position: relative; width: 100%; padding-bottom: 100%; background-position: initial initial; background-repeat: initial initial; }
 @media only screen and (min-width: 768px){
