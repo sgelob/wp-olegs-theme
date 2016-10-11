@@ -46,14 +46,8 @@
 		iosVhHeightBug();
 		$(window).bind('resize', iosVhHeightBug);
 	}
-	
-	<?php if ( is_single() ) { ?>
-	// FitVids.js
-	$(document).ready(function(){
-    	$("article").fitVids();
-  	});
-    <?php } ?>
-
+    
+    <?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>
     // Google Analytics
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -68,6 +62,7 @@
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-3011787-7', 'auto');
     ga('send', 'pageview');
+	<?php endif; ?>
 </script>
 </body> 
 </html>
