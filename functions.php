@@ -6,14 +6,15 @@ function my_jquery_enqueue()
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.1.0.min.js', false, null, true);
     
-    // if (is_singular('galleries') || is_single()) {
+    if (is_single()) {
     	wp_enqueue_script('jquery');
-    // }
+    }
 }
 
 add_action('wp_enqueue_scripts', 'my_jquery_enqueue');
 
 // General Scripts
+/*
 function olegs_register_files() {
     wp_register_script(
         'custom-scripts',
@@ -28,20 +29,24 @@ function olegs_register_files() {
 }
 
 add_action('wp_enqueue_scripts', 'olegs_register_files');
+*/
 
-/*
+
 // Add Async Attributes to WordPress Scripts
+
 function add_async_attribute($tag, $handle) {
-   $scripts_to_async = array('jquery', 'custom-scripts');
+   // add script handles to the array below
+   $scripts_to_async = array('lazysizes', 'lazysizesoptimumx');
+   
    foreach($scripts_to_async as $async_script) {
-      if ($async_script !== $handle) return $tag;
-      return str_replace(' src', ' async="async" src', $tag);
+      if ($async_script === $handle) {
+         return str_replace(' src', ' async="async" src', $tag);
+      }
    }
    return $tag;
 }
-
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
-*/
+
 
 // Remove WordPress version meta tag
 
@@ -575,5 +580,13 @@ function my_deregister_scripts(){
   wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'my_deregister_scripts' );
+
+// Remove query strings from static resources
+
+function ewp_remove_script_version( $src ){
+	return remove_query_arg( 'ver', $src );
+}
+add_filter( 'script_loader_src', 'ewp_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', 'ewp_remove_script_version', 15, 1 );
 
 ?>
