@@ -963,7 +963,9 @@ blockquote {
 	padding-top: 56.25%;
 	
 	video,
-	iframe {
+	iframe,
+	object,
+	embed {
 		position: absolute;
 		left: 0;
 		top: 0;
