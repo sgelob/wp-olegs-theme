@@ -17,11 +17,11 @@ $font-stack: "Lato", Arial, Helvetica, Tahoma, sans-serif;
 
 // Media queries
 
-$width-small: 768px; /* Small devices (tablets, 768px and up) */
-$width-medium: 992px; /* Medium devices (desktops, 992px and up) */
-$width-large: 1200px; /* Large devices (large desktops, 1200px and up) */
+$width-small: 48em; /* Small devices (tablets, 768px and up) */
+$width-medium: 62em; /* Medium devices (desktops, 992px and up) */
+$width-large: 75em; /* Large devices (large desktops, 1200px and up) */
 
-$mobile-first: "screen and (max-width: 767px)";
+$mobile-first: "screen and (max-width: 47.9375em)";
 
 // Retina images
 
