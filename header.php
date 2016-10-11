@@ -36,7 +36,7 @@
 			include (TEMPLATEPATH . '/critical-landing.css');
 		} else if ( is_singular('galleries') ) {
 			include (TEMPLATEPATH . '/critical-gallery.css');
-		} else if ( is_page_template( 'page-blog.php' ) || is_single() ) {
+		} else if ( is_page_template( 'page-blog.php' ) || is_single() || is_category() ) {
 			include (TEMPLATEPATH . '/critical-blog.css');
 		} else if ( is_page_template( 'page-photos.php' ) || is_tax() ) {
 			include (TEMPLATEPATH . '/critical-photos.css');
