@@ -1,22 +1,17 @@
 html{ font-family: sans-serif; }
 body{ margin: 0px; }
-article, header, main, nav, section{ display: block; }
+article, header, nav{ display: block; }
 a{ background-color: transparent; }
 h1{ font-size: 2em; margin: 0.67em 0px; }
-img{ border: 0px; }
 body{ background-color: rgb(36, 35, 34); color: rgb(85, 85, 85); font-family: Arial, Helvetica, Tahoma, sans-serif; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; background-position: initial initial; background-repeat: initial initial; }
 @media only screen and (min-width: 768px){
 body{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
 }
-h1, h2{ font-family: Arial, Helvetica, Tahoma, sans-serif; }
+h1{ font-family: Arial, Helvetica, Tahoma, sans-serif; }
 @media only screen and (min-width: 768px){
-h1, h2{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
+h1{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
 }
-section{ background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial; }
 a{ text-decoration: none; color: inherit; transition: all 1s ease; -webkit-transition: all 1s ease; }
-a img{ -webkit-transform: translateZ(0px); }
-.clearfix::before, .clearfix::after{ content: ' '; display: table; }
-.clearfix::after{ clear: both; }
 .offscreen{ position: absolute; clip: rect(1px 1px 1px 1px); padding: 0px; border: 0px; height: 0.063em; width: 0.063em; overflow: hidden; }
 .header-inner{ display: table; width: 100%; position: relative; margin-right: auto; margin-left: auto; padding-right: 0px; padding-left: 0px; z-index: 9999 !important; }
 @media only screen and (min-width: 768px){
@@ -33,6 +28,7 @@ a img{ -webkit-transform: translateZ(0px); }
 @media only screen and (min-width: 768px){
 .header-inner > div a{ font-size: 4em; }
 }
+.single-galleries .header-inner > div a{ color: rgb(255, 255, 255); }
 nav{ font-size: 1em; font-weight: 400; text-transform: uppercase; display: block; float: none; vertical-align: middle; }
 @media only screen and (min-width: 768px){
 nav{ display: table-cell; }
@@ -44,43 +40,65 @@ nav ul{ margin: 0px; padding-left: 0px; list-style: none; text-align: center; }
 @media only screen and (min-width: 768px){
 nav ul{ text-align: right; }
 }
-nav ul li{ display: inline-block; line-height: 1; }
+nav li{ display: inline-block; line-height: 1; }
 @media only screen and (min-width: 768px){
-nav ul li:last-child a{ padding-right: 0px; }
+nav li:last-child a{ padding-right: 0px; }
 }
-nav ul li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
+nav li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
 @media only screen and (min-width: 768px){
-nav ul li a{ padding: 3em 1em; }
+nav li a{ padding: 3em 1em; }
 }
-nav ul li.current-menu-item a{ text-decoration: underline; }
-.wrap{ overflow: hidden; margin: 0px; background-color: rgb(36, 35, 34); background-position: initial initial; background-repeat: initial initial; }
-.box{ background-color: rgb(51, 51, 51); float: left; position: relative; width: 100%; padding-bottom: 100%; background-position: initial initial; background-repeat: initial initial; }
+.single-galleries .menu-item-16 a{ text-decoration: underline; }
+.dark-header a{ color: rgb(36, 35, 34) !important; }
+.gallery-cover{ box-sizing: border-box; height: 100vh; margin-top: -5.3125em; overflow: hidden; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat no-repeat; }
 @media only screen and (min-width: 768px){
-.box{ width: 50%; padding-bottom: 50%; }
+.gallery-cover{ margin-top: -7em; }
 }
 @media only screen and (min-width: 992px){
-.box{ width: 25%; padding-bottom: 25%; }
+.gallery-cover{ margin-top: -9.75em; }
 }
-.box-inner{ position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; overflow: hidden; }
-.box-inner img{ width: 100%; transition: all 1s ease; -webkit-transition: all 1s ease; }
- .box-inner h2{ position: absolute; bottom: 0px; left: 0px; right: 0px; margin-bottom: 0px; background-color: rgba(0, 0, 0, 0.498039); text-align: center; font-weight: 400 !important; font-size: 1.6em !important; color: rgb(255, 255, 255) !important; padding: 0.625em !important; text-transform: none !important; background-position: initial initial; background-repeat: initial initial; }
- .genre-block p{ padding: 0px 5%; font-size: 1.1em; line-height: 1.45em; }
+@media (device-height: 64em) and (device-width: 48em) and (orientation: portrait){
+.gallery-cover{ height: 64em; }
+}
+@media (device-height: 64em) and (device-width: 48em) and (orientation: landscape){
+.gallery-cover{ height: 48em; }
+}
+@media screen and (device-aspect-ratio: 40/71){
+.gallery-cover{ height: 31.25em; }
+}
+@media only screen and (-webkit-device-pixel-ratio: 1) and (device-height: 30em) and (device-width: 20em){
+.gallery-cover{ height: 20em; }
+}
+.gallery-cover div{ padding: 0.5em; position: absolute; bottom: 0px; left: 0px; right: 0px; margin-bottom: 0px; background-color: rgba(0, 0, 0, 0.6); background-position: initial initial; background-repeat: initial initial; }
 @media only screen and (min-width: 768px){
- .genre-block p{ padding: 0px 10%; font-size: 1.2em; line-height: 1.45em; }
+.gallery-cover div{ padding: 1em; }
+}
+.gallery-cover h1{ font-size: 1.3em; font-weight: 300; text-align: center; color: rgb(255, 255, 255); text-transform: uppercase; margin: 0px; }
+@media only screen and (min-width: 768px){
+.gallery-cover h1{ font-size: 1.8em; margin: 0.2em 0px; }
 }
 @media only screen and (min-width: 992px){
- .genre-block p{ padding: 0px 15%; font-size: 1.3em; line-height: 1.55em; }
+.gallery-cover h1{ font-size: 2.5em; }
+}
+.gallery-cover p{ color: rgb(153, 153, 153); text-align: center; margin: 0.5em 0px; }
+@media only screen and (min-width: 768px){
+.gallery-cover p{ font-size: 1.2em; margin: 1em 0px; }
+}
+.gallery-cover p a{ font-weight: 700; }
+.gallery-cover p span{ display: block; }
+.single-galleries .gallery-cover p span{ display: inline; }
+ .gallery-content{ padding: 0px 5%; font-size: 1.1em; line-height: 1.45em; }
+@media only screen and (min-width: 768px){
+ .gallery-content{ padding: 0px 10%; font-size: 1.2em; line-height: 1.45em; }
+}
+@media only screen and (min-width: 992px){
+ .gallery-content{ padding: 0px 15%; font-size: 1.3em; line-height: 1.55em; }
 }
 @media only screen and (min-width: 1200px){
- .genre-block p{ padding: 0px 20%; font-size: 1.4em; line-height: 1.65em; }
+ .gallery-content{ padding: 0px 20%; font-size: 1.4em; line-height: 1.65em; }
 }
-.genre-block{ background-color: rgb(36, 35, 34); text-align: center; background-position: initial initial; background-repeat: initial initial; }
-.genre-block p{ color: rgb(153, 153, 153); }
-.genre-block a::after{ content: →; position: relative; display: inline-block; top: -0.1em; left: 0.2em; }
-.genre-block h1{ font-size: 2em; padding: 0.5em 0.5em 0px; font-weight: 300; color: rgb(255, 255, 255); text-transform: uppercase; margin-bottom: 0px; }
+ .gallery-content{ background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial; }
+.gallery-content{ padding: 1em 1em 0px; }
 @media only screen and (min-width: 768px){
-.genre-block h1{ font-size: 3em; }
-}
-@media only screen and (min-width: 992px){
-.genre-block h1{ font-size: 4em; }
+.gallery-content{ padding: 3em 1em 0px; }
 }
