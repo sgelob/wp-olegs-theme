@@ -1,12 +1,6 @@
 module.exports = function(grunt) {
 	// Project configuration
 	grunt.initConfig({
-		concat: {
-			js: {
-				src: ['bower_components/fitvids/jquery.fitvids.js'],
-				dest: 'build/js/scripts.js',
-    		}
-  		},
   		sass: {                                    // Task
 	  		dist: {                                // Target
 		  		options: {                         // Target options
@@ -94,9 +88,8 @@ module.exports = function(grunt) {
 	});
 	// Load Tasks
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-criticalcss');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	// Register Tasks
-	grunt.registerTask('default', ['concat', 'sass', 'criticalcss', 'watch']);
+	grunt.registerTask('default', ['sass', 'criticalcss', 'watch']);
 };
