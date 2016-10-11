@@ -44,16 +44,16 @@ nav ul{ margin: 0px; padding-left: 0px; list-style: none; text-align: center; }
 @media only screen and (min-width: 768px){
 nav ul{ text-align: right; }
 }
-nav ul li{ display: inline-block; line-height: 1; }
+nav li{ display: inline-block; line-height: 1; }
 @media only screen and (min-width: 768px){
-nav ul li:last-child a{ padding-right: 0px; }
+nav li:last-child a{ padding-right: 0px; }
 }
-nav ul li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
+nav li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
 @media only screen and (min-width: 768px){
-nav ul li a{ padding: 3em 1em; }
+nav li a{ padding: 3em 1em; }
 }
-nav ul li.current-menu-item a{ text-decoration: underline; }
-.gallery-cover{ box-sizing: border-box; height: 100vh; margin-top: -5.3125em; overflow: hidden; -webkit-background-size: cover; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat no-repeat; }
+nav li.current-menu-item a{ text-decoration: underline; }
+.gallery-cover{ box-sizing: border-box; height: 100vh; margin-top: -5.3125em; overflow: hidden; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat no-repeat; }
 @media only screen and (min-width: 768px){
 .gallery-cover{ margin-top: -7em; }
 }
