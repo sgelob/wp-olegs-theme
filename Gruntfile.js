@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 			},
 			about: {
 				options: {
-					url: "https://olegs.be/web-designer-sviluppatore-wordpress/",
+					url: "https://olegs.be/freelance-torino-web-performance-user-experience/",
 					width: 1200,
 					height: 900,
 					outputfile: "critical-about.css",
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
 			},
 			gallery: {
 				options: {
-					url: "https://olegs.be/photos/",
+					url: "https://olegs.be/gallery/turin-italy/",
 					width: 1200,
 					height: 900,
 					outputfile: "critical-gallery.css",
