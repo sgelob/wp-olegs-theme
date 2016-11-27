@@ -59,8 +59,6 @@
 			<div>
 				<h1>
 					<span itemprop="name" class="p-name"><strong><?php the_title(); ?></strong></span>
-					<br>
-					<span itemprop="jobTitle" class="p-role"><?php the_excerpt_rss(); ?></span>
 				</h1>
 			</div>
 		</header>
