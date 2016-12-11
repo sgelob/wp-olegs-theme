@@ -34,18 +34,6 @@
         s.parentNode.insertBefore(wf, s);
     })();
 	};
-	
-	/* Fix iOS 7 bug for -unit support */
-	var iOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
-	if(iOS) {
-		function iosVhHeightBug() {
-			var height = $(window).height();
-			$(".gallery-cover").css('height', height);
-		}
-		
-		iosVhHeightBug();
-		$(window).bind('resize', iosVhHeightBug);
-	}
     
     <?php if (!isset($_SERVER['HTTP_USER_AGENT']) || stripos($_SERVER['HTTP_USER_AGENT'], 'Speed Insights') === false): ?>
     // Google Analytics
@@ -63,6 +51,16 @@
     ga('create', 'UA-3011787-7', 'auto');
     ga('send', 'pageview');
 	<?php endif; ?>
+	
+	// Hotjar Tracking Code
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:142281,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 </body> 
 </html>
