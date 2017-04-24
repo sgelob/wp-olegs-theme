@@ -22,4 +22,10 @@
       background-image: url( <?php echo $thumb_url_full; ?> );
     }
   }
+  
+   @media all and ((-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)) {
+    .gallery-cover {
+      background-image: url( <?php echo $thumb_url_full; ?> );
+    }
+  }
 </style>
