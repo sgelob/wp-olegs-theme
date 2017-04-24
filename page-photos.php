@@ -53,6 +53,16 @@ get_header(); ?>
 			</section>
 			<div class="clearfix"></div>
 		<?php endforeach; endforeach; ?>
+		
+		
+		<section class="genre-block">
+			<header>
+				<h1><a href="https://www.instagram.com/sgelob/" title="Olegs Belousovs (@sgelob) • Foto e video di Instagram">Instagram</a></h1>
+				<p>My camera phone photographs from around the world.</p>
+			</header>
+			<?php echo do_shortcode( '[instagram-feed]' ); ?>
+		</section>
+<div class="clearfix"></div>
 	</main>
 </section>
           
