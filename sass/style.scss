@@ -721,16 +721,6 @@ nav {
 		@extend %text-styles;
 	}
 
-	a {
-		&:after {
-			content: "→";
-			position: relative;
-			display: inline-block;
-			top: -0.1em;
-			left: 0.2em;
-		}
-	}
-
 	h1 {
 		font-size: 2em;
 		padding: 0.5em;
@@ -739,6 +729,16 @@ nav {
 		text-transform: uppercase;
 		margin-bottom: 0;
 		padding-bottom: 0;
+		
+		a {
+			&:after {
+				content: "→";
+				position: relative;
+				display: inline-block;
+				top: -0.1em;
+				left: 0.2em;
+			}
+		}
 
 		@include responsive(small-screens) {
 			font-size: 3em;
