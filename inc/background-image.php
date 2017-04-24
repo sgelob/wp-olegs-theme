@@ -10,20 +10,26 @@
   .gallery-cover {
     background-image: url( <?php echo $thumb_url_medium; ?> );
   }
+  
+  @media all and (min-width: 320px) and (min-resolution: 2dppx) {
+    .gallery-cover {
+      background-image: url( <?php echo $thumb_url_large; ?> );
+    }
+  }
 
   @media all and (min-width: 768px) {
     .gallery-cover {
       background-image: url( <?php echo $thumb_url_large; ?> );
     }
   }
-
-  @media all and (min-width: 992px) {
+  
+  @media all and (min-width: 768px) and (min-resolution: 2dppx) {
     .gallery-cover {
       background-image: url( <?php echo $thumb_url_full; ?> );
     }
   }
-  
-   @media all and ((-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)) {
+
+  @media all and (min-width: 992px) {
     .gallery-cover {
       background-image: url( <?php echo $thumb_url_full; ?> );
     }
