@@ -14,6 +14,9 @@
 	?>
 </footer>
 <?php wp_footer(); ?>
+
+<script src="https://olegs.be/webperf/boomerang.custom.min.js" type="text/javascript"></script>
+
 <script>
 	window.onload = function() {    
         // Google Fonts
@@ -52,15 +55,10 @@
     ga('send', 'pageview');
 	<?php endif; ?>
 	
-	// Hotjar Tracking Code
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:142281,hjsv:5};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+	// Boomerang
+    BOOMR.init({
+	    beacon_url: "https://olegs.be/webperf/beacon.gif"
+	});
 </script>
 </body> 
 </html>
