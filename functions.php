@@ -467,7 +467,7 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
         $output .= '<li>';
-        $attributes = ' itemprop="url" target="_blank" class="u-url" href="'.esc_attr($item->url).'"';
+        $attributes = ' itemprop="url" class="u-url" href="'.esc_attr($item->url).'"';
         $item_output = $args->before;
         $current_url = (is_ssl() ? 'https://' : 'http://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         $item_url = esc_attr($item->url);
