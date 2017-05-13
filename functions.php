@@ -4,7 +4,7 @@
 function my_jquery_enqueue()
 {
     wp_deregister_script('jquery');
-    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.1.0.min.js', false, null, true);
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', false, null, true);
     
     if (is_single()) {
     	wp_enqueue_script('jquery');
@@ -562,6 +562,8 @@ function jeherve_remove_all_jp_css() {
   wp_deregister_style( 'jetpack-widgets' ); // Widgets
   
   wp_deregister_style( 'lazysizes' );
+  
+  wp_deregister_style( 'sb_instagram_styles' );
 }
 add_action('wp_print_styles', 'jeherve_remove_all_jp_css' );
 
