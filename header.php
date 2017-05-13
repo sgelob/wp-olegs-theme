@@ -9,6 +9,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-32x32.png" sizes="32x32" />
 	<title><?php wp_title(''); ?></title>
