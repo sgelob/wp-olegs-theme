@@ -1,15 +1,25 @@
-html{ font-family: sans-serif; }
+Console output: boomerang.rt: [debug] init RTConsole output: boomerang.rt: [debug] Called doneConsole output: boomerang: [debug] Sending url: https://olegs.be/webperf/beacon.gif?rt.start=navigation
+	rt.tstart=1494661615752
+	rt.bstart=1494661619050
+	rt.end=1494661620709
+	t_resp=0
+	t_page=4957
+	t_done=4957
+	r=
+	t_other=boomerang%7C1%2Cboomr_fb%7C3298%2Ct_domloaded%7C3303
+	v=0.9.1361953770
+	u=https%3A%2F%2Folegs.be%2Fphotos%2Fhtml{ font-family: sans-serif; }
 body{ margin: 0px; }
 article, header, main, nav, section{ display: block; }
 a{ background-color: transparent; }
 h1{ font-size: 2em; margin: 0.67em 0px; }
 img{ border: 0px; }
 body{ background-color: rgb(36, 35, 34); color: rgb(85, 85, 85); font-family: Arial, Helvetica, Tahoma, sans-serif; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; background-position: initial initial; background-repeat: initial initial; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 body{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
 }
 h1, h2{ font-family: Arial, Helvetica, Tahoma, sans-serif; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 h1, h2{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
 }
 section{ background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial; }
@@ -19,68 +29,70 @@ a img{ -webkit-transform: translateZ(0px); }
 .clearfix::after{ clear: both; }
 .offscreen{ position: absolute; clip: rect(1px 1px 1px 1px); padding: 0px; border: 0px; height: 0.063em; width: 0.063em; overflow: hidden; }
 .header-inner{ display: table; width: 100%; position: relative; margin-right: auto; margin-left: auto; padding-right: 0px; padding-left: 0px; z-index: 9999 !important; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .header-inner{ width: 55%; padding-right: 1.563em; padding-left: 1.563em; }
 }
 .header-inner > div{ float: none; padding-left: 0px; text-align: center; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .header-inner > div{ display: table-cell; padding-top: 0.7em; text-align: left; }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 62em){
 .header-inner > div{ padding-top: 2em; }
 }
 .header-inner > div a{ color: rgb(247, 247, 247); display: inline-block; vertical-align: middle; font-size: 2em; font-weight: 700; margin: 0px; letter-spacing: -0.063em; text-transform: lowercase; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .header-inner > div a{ font-size: 4em; }
 }
 nav{ font-size: 1em; font-weight: 400; text-transform: uppercase; display: block; float: none; vertical-align: middle; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 nav{ display: table-cell; }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 62em){
 nav{ font-size: 1.4em; }
 }
 nav ul{ margin: 0px; padding-left: 0px; list-style: none; text-align: center; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 nav ul{ text-align: right; }
 }
 nav li{ display: inline-block; line-height: 1; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 nav li:last-child a{ padding-right: 0px; }
 }
 nav li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 nav li a{ padding: 3em 1em; }
 }
 nav li.current-menu-item a{ text-decoration: underline; }
 .wrap{ overflow: hidden; margin: 0px; background-color: rgb(36, 35, 34); background-position: initial initial; background-repeat: initial initial; }
 .box{ background-color: rgb(51, 51, 51); float: left; position: relative; width: 100%; padding-bottom: 100%; background-position: initial initial; background-repeat: initial initial; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .box{ width: 50%; padding-bottom: 50%; }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 62em){
 .box{ width: 25%; padding-bottom: 25%; }
 }
 .box-inner{ position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; overflow: hidden; }
 .box-inner img{ width: 100%; transition: all 1s ease; -webkit-transition: all 1s ease; }
  .box-inner h2{ position: absolute; bottom: 0px; left: 0px; right: 0px; margin-bottom: 0px; background-color: rgba(0, 0, 0, 0.498039); text-align: center; font-weight: 400 !important; font-size: 1.6em !important; color: rgb(255, 255, 255) !important; padding: 0.625em !important; text-transform: none !important; background-position: initial initial; background-repeat: initial initial; }
  .genre-block p{ padding: 0px 5%; font-size: 1.1em; line-height: 1.45em; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
  .genre-block p{ padding: 0px 10%; font-size: 1.2em; line-height: 1.45em; }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 62em){
  .genre-block p{ padding: 0px 15%; font-size: 1.3em; line-height: 1.55em; }
 }
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 75em){
  .genre-block p{ padding: 0px 20%; font-size: 1.4em; line-height: 1.65em; }
 }
 .genre-block{ background-color: rgb(36, 35, 34); text-align: center; background-position: initial initial; background-repeat: initial initial; }
 .genre-block p{ color: rgb(153, 153, 153); }
-.genre-block a::after{ content: →; position: relative; display: inline-block; top: -0.1em; left: 0.2em; }
 .genre-block h1{ font-size: 2em; padding: 0.5em 0.5em 0px; font-weight: 300; color: rgb(255, 255, 255); text-transform: uppercase; margin-bottom: 0px; }
-@media only screen and (min-width: 768px){
+.genre-block h1 a::after{ content: →; position: relative; display: inline-block; top: -0.1em; left: 0.2em; }
+@media only screen and (min-width: 48em){
 .genre-block h1{ font-size: 3em; }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 62em){
 .genre-block h1{ font-size: 4em; }
 }
+#sb_instagram .sbi_photo img{ width: 100%; height: auto; }
+#sb_instagram img{ display: block; padding: 0px !important; margin: 0px !important; max-width: 100% !important; opacity: 1 !important; }
