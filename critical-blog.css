@@ -1,94 +1,94 @@
-html{ font-family: sans-serif; }
+Console output: boomerang.rt: [debug] init RThtml{ font-family: sans-serif; }
 body{ margin: 0px; }
 article, header, nav{ display: block; }
 a{ background-color: transparent; }
 h1{ font-size: 2em; margin: 0.67em 0px; }
 body{ background-color: rgb(36, 35, 34); color: rgb(85, 85, 85); font-family: Arial, Helvetica, Tahoma, sans-serif; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; background-position: initial initial; background-repeat: initial initial; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 body{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
 }
  body.page-template-page-blog{ background-color: rgb(51, 102, 153); }
 h1{ font-family: Arial, Helvetica, Tahoma, sans-serif; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 h1{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
 }
 a{ text-decoration: none; color: inherit; transition: all 1s ease; -webkit-transition: all 1s ease; }
 .clearfix::before, .clearfix::after{ content: ' '; display: table; }
 .clearfix::after{ clear: both; }
 .offscreen{ position: absolute; clip: rect(1px 1px 1px 1px); padding: 0px; border: 0px; height: 0.063em; width: 0.063em; overflow: hidden; }
-.about-content h1, .about-content p{ max-width: 50rem; margin: 1.2em auto; }
+ .about-content h1, .about-content p{ max-width: 50rem; margin: 1.2em auto; }
 .header-inner{ display: table; width: 100%; position: relative; margin-right: auto; margin-left: auto; padding-right: 0px; padding-left: 0px; z-index: 9999 !important; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .header-inner{ width: 55%; padding-right: 1.563em; padding-left: 1.563em; }
 }
 .header-inner > div{ float: none; padding-left: 0px; text-align: center; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .header-inner > div{ display: table-cell; padding-top: 0.7em; text-align: left; }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 62em){
 .header-inner > div{ padding-top: 2em; }
 }
 .header-inner > div a{ color: rgb(247, 247, 247); display: inline-block; vertical-align: middle; font-size: 2em; font-weight: 700; margin: 0px; letter-spacing: -0.063em; text-transform: lowercase; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .header-inner > div a{ font-size: 4em; }
 }
 nav{ font-size: 1em; font-weight: 400; text-transform: uppercase; display: block; float: none; vertical-align: middle; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 nav{ display: table-cell; }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 62em){
 nav{ font-size: 1.4em; }
 }
 nav ul{ margin: 0px; padding-left: 0px; list-style: none; text-align: center; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 nav ul{ text-align: right; }
 }
 nav li{ display: inline-block; line-height: 1; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 nav li:last-child a{ padding-right: 0px; }
 }
 nav li a{ color: rgb(255, 255, 255); display: block; padding: 1em 0.5em; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 nav li a{ padding: 3em 1em; }
 }
 nav li.current-menu-item a{ text-decoration: underline; }
 .about-content{ padding: 0px 5%; font-size: 1.1em; line-height: 1.45em; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .about-content{ padding: 0px 10%; font-size: 1.2em; line-height: 1.45em; }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 62em){
 .about-content{ padding: 0px 15%; font-size: 1.3em; line-height: 1.55em; }
 }
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 75em){
 .about-content{ padding: 0px 20%; font-size: 1.4em; line-height: 1.65em; }
 }
 .about-content{ background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial; }
 .about-content p a{ color: rgb(51, 102, 153); text-decoration: underline; }
 .about-content .excerpt{ color: rgb(36, 35, 34); }
 .about-content .excerpt::after{ content: ' '; display: block; height: 0.063em; background-color: rgb(153, 153, 153); width: 15%; margin: 1em auto 0px; background-position: initial initial; background-repeat: initial initial; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .about-content .excerpt::after{ margin: 2em auto 0px; }
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .about-content .excerpt{ font-size: 1.1em; line-height: 1.55em; }
 }
 .about-content{ padding: 1em; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .about-content{ padding: 3em 1em; }
 }
  .page-template-page-blog .about-content{ padding-top: 1em; padding-bottom: 1em; }
  .page-template-page-blog .about-content header p{ font-size: 90%; text-align: center; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
  .page-template-page-blog .about-content header p{ font-size: 75%; }
 }
  .page-template-page-blog h1{ font-size: 1.3em; font-weight: 400; line-height: normal; text-align: center; text-transform: none; margin: 0.8em auto; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
  .page-template-page-blog h1{ font-size: 1.6em; }
 }
-@media only screen and (min-width: 992px){
+@media only screen and (min-width: 62em){
  .page-template-page-blog h1{ font-size: 2em; }
 }
 .sep{ color: rgb(153, 153, 153); display: block; line-height: 0.5em; margin: 0px 0.2em; }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 48em){
 .sep{ display: inline; }
 }
