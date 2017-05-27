@@ -13,7 +13,7 @@
   "author": "Olegs Belousovs",
   "license": "ISC",
   "dependencies": {
-    "grunt": "^0.4.5",
+    "grunt": "^1.0.1",
     "normalize.css": "^3.0.3",
     "normalize.scss": "^0.1.0"
   },
