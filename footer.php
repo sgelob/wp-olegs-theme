@@ -1,7 +1,7 @@
 <footer class="footer-foo" role="contentinfo">
 	<ul class="footer-copyright">
-		<li><?php echo olegs_copyright(); ?> <?php echo get_option('footercontent1'); ?></li>
-		<li><?php echo get_option('footercontent2'); ?></li>
+		<li class="footer-item"><?php echo olegs_copyright(); ?> <?php echo get_option('footercontent1'); ?></li>
+		<li class="footer-item"><?php echo get_option('footercontent2'); ?></li>
 	</ul>
 	<?php wp_nav_menu( array( 
 		'theme_location' => 'footer-social',
@@ -16,6 +16,10 @@
 <?php wp_footer(); ?>
 
 <script src="https://olegs.be/webperf/boomerang.custom.min.js" type="text/javascript"></script>
+
+<script>
+	performance.mark('start')
+</script>
 
 <script>
 	window.onload = function() {    
@@ -60,5 +64,10 @@
 	    beacon_url: "https://olegs.be/webperf/beacon.gif"
 	});
 </script>
+
+<script>
+	performance.mark('end')
+</script>
+
 </body> 
 </html>
