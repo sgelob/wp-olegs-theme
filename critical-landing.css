@@ -1,10 +1,20 @@
-Console output: boomerang.rt: [debug] init RThtml{ font-family: sans-serif; }
+Console output: boomerang.rt: [debug] init RTConsole output: boomerang.rt: [debug] Called doneConsole output: boomerang: [debug] Sending url: https://olegs.be/webperf/beacon.gif?rt.start=navigation
+	rt.tstart=1496341451435
+	rt.bstart=1496341452760
+	rt.end=1496341453881
+	t_resp=0
+	t_page=2446
+	t_done=2446
+	r=
+	t_other=boomerang%7C1%2Cboomr_fb%7C1325%2Ct_domloaded%7C1330
+	v=0.9.1361953770
+	u=https%3A%2F%2Folegs.be%2Fottimizzazione-prestazioni-velocita-sito-web-lento%2Fhtml{ font-family: sans-serif; }
 body{ margin: 0px; }
 article, header, nav{ display: block; }
 a{ background-color: transparent; }
 h1{ font-size: 2em; margin: 0.67em 0px; }
 img{ border: 0px; }
-body{ background-color: rgb(36, 35, 34); color: rgb(85, 85, 85); font-family: Arial, Helvetica, Tahoma, sans-serif; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; background-position: initial initial; background-repeat: initial initial; }
+body{ background-color: rgb(36, 35, 34); color: rgb(85, 85, 85); font-family: Arial, Helvetica, Tahoma, sans-serif; text-rendering: optimizelegibility; background-position: initial initial; background-repeat: initial initial; }
 @media only screen and (min-width: 48em){
 body{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
 }
