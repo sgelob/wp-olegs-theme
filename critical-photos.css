@@ -1,12 +1,12 @@
 Console output: boomerang.rt: [debug] init RTConsole output: boomerang.rt: [debug] Called doneConsole output: boomerang: [debug] Sending url: https://olegs.be/webperf/beacon.gif?rt.start=navigation
-	rt.tstart=1494661615752
-	rt.bstart=1494661619050
-	rt.end=1494661620709
+	rt.tstart=1496341470537
+	rt.bstart=1496341472323
+	rt.end=1496341480128
 	t_resp=0
-	t_page=4957
-	t_done=4957
+	t_page=9591
+	t_done=9591
 	r=
-	t_other=boomerang%7C1%2Cboomr_fb%7C3298%2Ct_domloaded%7C3303
+	t_other=boomerang%7C1%2Cboomr_fb%7C1786%2Ct_domloaded%7C1791
 	v=0.9.1361953770
 	u=https%3A%2F%2Folegs.be%2Fphotos%2Fhtml{ font-family: sans-serif; }
 body{ margin: 0px; }
@@ -14,7 +14,7 @@ article, header, main, nav, section{ display: block; }
 a{ background-color: transparent; }
 h1{ font-size: 2em; margin: 0.67em 0px; }
 img{ border: 0px; }
-body{ background-color: rgb(36, 35, 34); color: rgb(85, 85, 85); font-family: Arial, Helvetica, Tahoma, sans-serif; text-rendering: optimizelegibility; -webkit-font-smoothing: antialiased; background-position: initial initial; background-repeat: initial initial; }
+body{ background-color: rgb(36, 35, 34); color: rgb(85, 85, 85); font-family: Arial, Helvetica, Tahoma, sans-serif; text-rendering: optimizelegibility; background-position: initial initial; background-repeat: initial initial; }
 @media only screen and (min-width: 48em){
 body{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
 }
@@ -24,7 +24,7 @@ h1, h2{ font-family: Lato, Arial, Helvetica, Tahoma, sans-serif !important; }
 }
 section{ background-color: rgb(255, 255, 255); background-position: initial initial; background-repeat: initial initial; }
 a{ text-decoration: none; color: inherit; transition: all 1s ease; -webkit-transition: all 1s ease; }
-a img{ -webkit-transform: translateZ(0px); }
+a img{ }
 .clearfix::before, .clearfix::after{ content: ' '; display: table; }
 .clearfix::after{ clear: both; }
 .offscreen{ position: absolute; clip: rect(1px 1px 1px 1px); padding: 0px; border: 0px; height: 0.063em; width: 0.063em; overflow: hidden; }
