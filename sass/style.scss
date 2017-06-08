@@ -47,8 +47,8 @@ section {
 }
 
 a {
-	text-decoration: none;
 	color: inherit;
+	text-decoration: none;
 
 	@include transition(all, 1s, ease);
 
@@ -64,8 +64,8 @@ a {
 
 	.page-template-page-about &,
 	.page-template-page-what-i-do & {
-		text-align: center;
 		background: transparent;
+		text-align: center;
 	}
 }
 
@@ -86,14 +86,14 @@ a {
 }
 
 .offscreen {
-	position: absolute;
+	border: 0;
 	clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
 	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0;
-	border: 0;
 	height: 0.063em; /* 1/16 */
-	width: 0.063em; /* 1/16 */
 	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 0.063em; /* 1/16 */
 }
 
 .wp-embedded-content {
@@ -101,20 +101,20 @@ a {
 }
 
 %contentcolumn {
-	max-width: 50rem;
 	margin: 1.2em auto;
+	max-width: 50rem;
 }
 
 code {
+	background-color: $lighter-grey;
+    border-radius: 0.25em; /* 4/16 */
 	display: block;
+	font-size: .8em;
+	line-height: 1.42857143;
+	margin: 0 0 1em;
     padding: 1em;
-    margin: 0 0 1em;
-    font-size: .8em;
-    line-height: 1.42857143;
     word-break: break-all;
     word-wrap: break-word;
-    background-color: $lighter-grey;
-    border-radius: 0.25em; /* 4/16 */
 }
 
 .scroll-top {
@@ -134,18 +134,18 @@ code {
 
 .header-inner {
 	display: table;
-	width: 100%;
-	position: relative;
 	margin-right: auto;
 	margin-left: auto;
 	padding-right: 0;
 	padding-left: 0;
+	position: relative;
+	width: 100%;
 	z-index: 9999!important;
 
 	@include responsive(small-screens) {
-		width: 55%;
 		padding-right: 1.563em; /* 25/16 */
 		padding-left: 1.563em; /* 25/16 */
+		width: 55%;
 	}
 
 	> div {
@@ -166,12 +166,12 @@ code {
 		a {
 			color: $lighter-grey;
 			display: inline-block;
-			vertical-align: middle;
 			font-size: 2em;
 			font-weight: 700;
-			margin: 0;
 			letter-spacing: -0.063em; /* -1/16 */
+			margin: 0;
 			text-transform: lowercase;
+			vertical-align: middle;
 
 			@include responsive(small-screens) {
 				font-size: 4em;
@@ -187,11 +187,11 @@ code {
 }
 
 nav {
+	display: block;
+	float: none;
 	font-size: 1em;
 	font-weight: 400;
 	text-transform: uppercase;
-	display: block;
-	float: none;
 	vertical-align: middle;
 
 	@include responsive(small-screens) {
@@ -1069,7 +1069,8 @@ blockquote {
 	}
 }
 
-.footer-copyright {
+.footer-copyright,
+.footer-social {
 	list-style: none;
 	padding: 0;
 }
@@ -1091,6 +1092,8 @@ blockquote {
 	}
 
 	li {
+		display: inline-block;
+		
 		a {
 			padding-left: 1em;
 		}
