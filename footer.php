@@ -22,10 +22,7 @@
 </script>
 
 <script>
-	window.onload = function() {
-		// Passive Event Listeners to Improve Scrolling Performance
-		document.addEventListener('touchstart', onTouchStart, {passive: true});
-		 
+	window.onload = function() {    
         // Google Fonts
 		WebFontConfig = {
         	google: {families: ['Lato:400,400italic,300,700:latin']},
