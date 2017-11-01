@@ -63,6 +63,9 @@
     BOOMR.init({
 	    beacon_url: "https://olegs.be/webperf/beacon.gif"
 	});
+	
+	// Passive Event Listeners to Improve Scrolling Performance
+	document.addEventListener('touchstart', onTouchStart, {passive: true});
 </script>
 
 <script>
