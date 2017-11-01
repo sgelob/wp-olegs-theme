@@ -22,7 +22,10 @@
 </script>
 
 <script>
-	window.onload = function() {    
+	window.onload = function() {
+		// Passive Event Listeners to Improve Scrolling Performance
+		document.addEventListener('touchstart', onTouchStart, {passive: true});
+		 
         // Google Fonts
 		WebFontConfig = {
         	google: {families: ['Lato:400,400italic,300,700:latin']},
@@ -63,9 +66,6 @@
     BOOMR.init({
 	    beacon_url: "https://olegs.be/webperf/beacon.gif"
 	});
-	
-	// Passive Event Listeners to Improve Scrolling Performance
-	document.addEventListener('touchstart', onTouchStart, {passive: true});
 </script>
 
 <script>
