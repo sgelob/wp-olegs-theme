@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node existing_build_script.js && workbox-cli generate:sw"
+    "build": "workbox-cli generate:sw"
   },
   "repository": {
     "type": "git",
