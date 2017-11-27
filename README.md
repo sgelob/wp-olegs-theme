@@ -27,7 +27,7 @@ Rename folder to your theme name, change the `sass/style.scss` intro block to yo
 
 * [Disqus Comment System](https://wordpress.org/plugins/disqus-comment-system/)
 * [PBD AJAX Load Posts](https://github.com/sgelob/wp-ajax-load-more-posts)
-* [RICG Responsive Images](https://wordpress.org/plugins/ricg-responsive-images/)
+* [RICG Responsive Images](https://wordpress.org/plugins/ricg-responsive-img/)
 * [WordPress SEO by Yoast](https://wordpress.org/extend/plugins/wordpress-seo/)
 * [W3 Total Cache](https://wordpress.org/extend/plugins/w3-total-cache/)
 
