@@ -19,31 +19,31 @@ importScripts('workbox-sw.prod.v2.1.2.js');
  */
 const fileManifest = [
   {
-    "url": "critical-about.css",
+    "url": "../critical-about.css",
     "revision": "4a6e2091235cf9e27d6b0a945b76768a"
   },
   {
-    "url": "critical-blog.css",
+    "url": "../critical-blog.css",
     "revision": "5acf2f36cf7f5f198c595c0154727dfa"
   },
   {
-    "url": "critical-gallery.css",
+    "url": "../critical-gallery.css",
     "revision": "f933175bf06a50cf53db9bbb06d984a0"
   },
   {
-    "url": "critical-home.css",
+    "url": "../critical-home.css",
     "revision": "a1999fe077d72324a394050956f771b6"
   },
   {
-    "url": "critical-landing.css",
+    "url": "../critical-landing.css",
     "revision": "219d44b7bf8478564077d801359c6b4b"
   },
   {
-    "url": "critical-photos.css",
+    "url": "../critical-photos.css",
     "revision": "79f89ff764b6f22fed69d32433f2e01d"
   },
   {
-    "url": "style.css",
+    "url": "../style.css",
     "revision": "36c93fadb2b13983aea8b5474e141b30"
   }
 ];
