@@ -3,7 +3,7 @@
   "short_name": "Olegs.be",
   "theme_color": "#31659b",
   "background_color": "#fff",
-  "display": "browser",
+  "display": "standalone",
   "Scope": "/",
   "start_url": "https://olegs.be/",
   "icons": [
