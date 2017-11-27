@@ -8,6 +8,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#31659b"/>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
 	<link rel="manifest" href="<?php bloginfo('template_directory'); ?>/manifest.json">
