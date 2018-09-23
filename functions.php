@@ -564,6 +564,8 @@ function jeherve_remove_all_jp_css() {
   wp_deregister_style( 'lazysizes' );
   
   wp_deregister_style( 'sb_instagram_styles' );
+  
+  wp_deregister_style( 'dashicons' );
 }
 add_action('wp_print_styles', 'jeherve_remove_all_jp_css' );
 
