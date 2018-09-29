@@ -14,6 +14,8 @@
 	<link rel="manifest" href="<?php bloginfo('template_directory'); ?>/manifest.json">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicon-32x32.png" sizes="32x32" />
+	<link rel="dns-prefetch" href="https://www.google-analytics.com">
+	<link rel="dns-prefetch" href="https://code.jquery.com">
 	<title><?php wp_title(''); ?></title>
 	
 	<script>
