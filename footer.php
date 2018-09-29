@@ -15,8 +15,6 @@
 </footer>
 <?php wp_footer(); ?>
 
-<script src="https://olegs.be/webperf/boomerang.custom.min.js" type="text/javascript"></script>
-
 <script>
 	performance.mark('start')
 </script>
@@ -58,11 +56,6 @@
     ga('create', 'UA-3011787-7', 'auto');
     ga('send', 'pageview');
 	<?php endif; ?>
-	
-	// Boomerang
-    BOOMR.init({
-	    beacon_url: "https://olegs.be/webperf/beacon.gif"
-	});
 	
 	//Register a service worker
 	if ('serviceWorker' in navigator) {
