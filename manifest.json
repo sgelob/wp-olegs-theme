@@ -2,7 +2,7 @@
   "name": "Olegs Belousovs",
   "short_name": "Olegs.be",
   "theme_color": "#31659b",
-  "background_color": "#fff",
+  "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/",
   "icons": [
