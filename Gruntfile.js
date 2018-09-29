@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 			},
 			about: {
 				options: {
-					url: "https://olegs.be/freelance-torino-web-performance-user-experience/",
+					url: "https://olegs.be/product-manager-torino-web-performance-user-experience/",
 					width: 1200,
 					height: 900,
 					outputfile: "critical-about.css",
