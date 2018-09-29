@@ -12,12 +12,8 @@
 body {
 	background: $dark;
 	color: #555;
-	font-family: $font-stack-mobile-first;
+	font-family: $font-stack;
 	text-rendering: optimizeLegibility;
-
-	@include responsive(small-screens) {
-		font-family: $font-stack!important;
-	}
 
 	&.category,
 	&.single-post,
@@ -31,16 +27,6 @@ body {
 }
 
 /* .share, */
-h1,
-h2,
-h3,
-h4 {
-	font-family: $font-stack-mobile-first;
-
-	@include responsive(small-screens) {
-		font-family: $font-stack!important;
-	}
-}
 
 section {
 	background: $white;
