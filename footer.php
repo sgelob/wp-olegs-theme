@@ -45,9 +45,5 @@
 		}
 </script>
 
-<script>
-	performance.mark('end')
-</script>
-
 </body>
 </html>
