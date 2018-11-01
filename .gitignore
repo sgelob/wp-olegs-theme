@@ -105,3 +105,4 @@ config.codekit*
 ######################
 settings/*
 .sass-cache
+package-lock.json
