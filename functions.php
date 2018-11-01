@@ -593,4 +593,8 @@ function ewp_remove_script_version( $src ){
 add_filter( 'script_loader_src', 'ewp_remove_script_version', 15, 1 );
 add_filter( 'style_loader_src', 'ewp_remove_script_version', 15, 1 );
 
+// Disable Yoast SEO Schema JSON-LD completely
+
+add_filter( 'wpseo_json_ld_output', '__return_empty_array' );
+
 ?>

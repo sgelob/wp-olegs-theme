@@ -5,6 +5,11 @@
     */
 get_header(); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	
+	<?php // Get attachment image URLs
+		$thumb_full = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+		$thumb_url_full = $thumb_full['0'];
+	?>
 
 	<article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" itemprop="blogPost" role="main">
 		<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="<?php the_permalink() ?>"/>
@@ -26,6 +31,9 @@ get_header(); ?>
 				<span class="sep">·</span>
 				<span><?php _e('Articolo in', 'olegs'); ?> <?php the_category(', ') ?></span>
 			</p>
+			<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="<?php echo $thumb_url_full; ?>">
+    		</span>
 		</header>
 		<p class="excerpt" itemprop="description"><?php echo get_the_excerpt(); ?></p>
 		<?php the_content(); ?>
