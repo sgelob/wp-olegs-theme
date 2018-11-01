@@ -51,8 +51,8 @@
 	<section class="gallery-cover h-card">
 		<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 				<meta itemprop="url" content="<?php echo $thumb_url_full; ?>">
-				<meta itemprop="width" content="1620">
-				<meta itemprop="height" content="1080">
+				<meta itemprop="width" content="1620px">
+				<meta itemprop="height" content="1080px">
 			</span>
 		<header>
 			<div class="vertical-align">

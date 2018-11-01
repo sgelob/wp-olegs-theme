@@ -36,8 +36,8 @@ get_header(); ?>
 		<header class="gallery-cover">
 			<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 				<meta itemprop="url" content="<?php echo $thumb_url_full; ?>">
-				<meta itemprop="width" content="1620">
-				<meta itemprop="height" content="1080">
+				<meta itemprop="width" content="1620px">
+				<meta itemprop="height" content="1080px">
 			</span>
 			<div>
 			<h1 itemprop="headline"><?php the_title(); ?></h1>
