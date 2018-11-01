@@ -47,8 +47,8 @@ get_header(); ?>
 				<span itemprop="publisher" itemscope itemtype="https://schema.org/Organization"/>
 					<span itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
 						<meta itemprop="url" content="<?php echo get_stylesheet_directory_uri(); ?>/img/olegs-belousovs-portrait.jpg">
-						<meta itemprop="width" content="1200">
-						<meta itemprop="height" content="1200">
+						<meta itemprop="width" content="1200px">
+						<meta itemprop="height" content="1200px">
     				</span>
 					<meta itemprop="name" content="<?php $author = get_the_author(); echo $author; ?>">
 				</span>
