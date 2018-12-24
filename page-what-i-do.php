@@ -49,11 +49,6 @@
 	
 <div itemscope itemtype="https://schema.org/Person">
 	<section class="gallery-cover h-card">
-		<span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-				<meta itemprop="url" content="<?php echo $thumb_url_full; ?>">
-				<meta itemprop="width" content="1620px">
-				<meta itemprop="height" content="1080px">
-			</span>
 		<header>
 			<div class="vertical-align">
 				<h2><?php $theshorttitle = get_post_meta($post->ID, 'about_contacts_title', true); echo $theshorttitle; ?></h2>
@@ -70,7 +65,7 @@
 			</div>
 			<div>
 				<h1>
-					<span itemprop="name" class="p-name"><strong><?php the_title(); ?></strong></span>
+					<span class="p-name"><strong><?php the_title(); ?></strong></span>
 				</h1>
 			</div>
 		</header>
