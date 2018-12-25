@@ -36,22 +36,7 @@ get_header(); ?>
 		<?php the_content(); ?>
 		<div class="clearfix"></div>
 		<p class="scroll-top"><a href="#top"><?php _e('⇡ Back to top', 'olegs'); ?></a></p>
-<!--
 		<div class="clearfix"></div>
-		<section class="share">
-			<header>
-				<h3><?php _e('Share This Gallery', 'olegs'); ?></h3>
-			</header>
-			<?php get_template_part( 'inc/share' ); ?>
-		</section>
--->
-		<div class="clearfix"></div>
-		<section class="comments">
-			<header>
-				<h3><?php _e('Leave Your Comments', 'olegs'); ?></h3>
-			</header>
-			<?php comments_template( '', true ); ?>
-		</section>
 		<section class="related">
 			<header>
 				<h3><?php _e('See the Related Galleries', 'olegs'); ?></h3>
